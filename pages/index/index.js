@@ -82,11 +82,11 @@ Page({
         console.log(res);
         if(res.statusCode==200){
           let arr = this.data.goodList;
-          console.log(arr.push(res.data.list))
-          console.log(arr);
+          arr.concat(res.data.list);
           this.setData({
             goodList:arr
           });
+          console.log(this.data.goodList);
         }
       },
       fail:error=>{

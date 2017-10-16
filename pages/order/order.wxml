@@ -1,0 +1,13 @@
+<view class='order'>
+  <view class='add'></view>
+  <view class='order_body'>
+    <view class='order_body_company'></view>
+    <view class='order_body_product'></view>
+    <view class='order_body_deliveryWay'></view>
+    <view class='order_body_word'></view>
+    <view class='order_body_total'></view>
+    <view class='order_body_coupon'></view>
+    <view class='order_body_moneyDetail'></view>
+  </view>
+  <view class='footer'></view>
+</view>

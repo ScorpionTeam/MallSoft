@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="container">
-  <scroll-view scroll-y="true" style="height:600px" upper-threshold="10" lower-threshold="10">
+  <scroll-view scroll-y="true" style="height:600px" upper-threshold="10" lower-threshold="10" bindscrolltolower='pullUp'>
     <view wx:for="{{goodList}}" wx:key="unique" style="display: block;" style="width: 100%; height: 340px">
       <view style="padding:0 30rpx;" bindtap="goodInfo">
         <navigator url="/pages/good/good?goodId={{item.id}}" hover-class="navigator-hover">

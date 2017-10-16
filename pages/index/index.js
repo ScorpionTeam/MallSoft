@@ -13,7 +13,46 @@ Page({
     page:{
       pageSize:5,
       pageNo:1
+    },
+    lastPage:false
+  },
+  // 上拉加载
+  pullUp:function(){
+    //最后一页，不再进行请求
+    if(this.data.lastPage){
+      wx.showToast({
+        title:'没有啦'
+      });
+      return ;
     }
+    let pageNo = this.data.page.pageNo + 1;
+    this.setData({
+      page: {
+        pageNo: pageNo
+      }
+    });
+    let url = this.data.baseUrl + 'good/preference-given?pageNo=' + this.data.page.pageNo + '&pageSize=5';
+    wx.showLoading({
+      title: "加载中"
+    })
+    wx.request({
+      url: url,
+      method: "GET",
+      success: res => {
+        if (res.statusCode == 200) {
+          console.log(res);
+          let arr = this.data.goodList.concat(res.data.list);
+          this.setData({
+            goodList: arr,
+            lastPage:res.data.lastPage
+          });
+          wx.hideLoading();
+        }
+      },
+      fail: error => {
+        console.log(error);
+      }
+    })
   },
   //事件处理函数
   bindViewTap: function () {
@@ -22,11 +61,20 @@ Page({
     })
   },
   onLoad: function () {
+    wx.authorize({
+      scope: 'scope.userInfo',
+      success:res=>{
+        wx.getUserInfo({
+          success:res=>{
+            console.log(res);
+          }
+        })
+      }
+    })
     wx.request({
       url: this.data.baseUrl + 'good/preference-given?pageNo=1&pageSize=5',
       method: 'GET',
       success: res => {
-        console.log(res);
         this.setData({
           goodList:res.data.list
         })
@@ -66,33 +114,7 @@ Page({
   * 页面上拉触底事件的处理函数
   */
   onReachBottom: function () {
-    let pageNo = this.data.page.pageNo+1;
-    this.setData({
-      page:{
-        pageNo:pageNo
-      }
-    })
-    console.log(pageNo);
-    console.log(this.data.page) 
-    let url = this.data.baseUrl + 'good/preference-given?pageNo='+this.data.page.pageNo+'&pageSize=5';
-    wx.request({
-      url: url,
-      method:"GET",
-      success:res=>{
-        console.log(res);
-        if(res.statusCode==200){
-          let arr = this.data.goodList;
-          arr.concat(res.data.list);
-          this.setData({
-            goodList:arr
-          });
-          console.log(this.data.goodList);
-        }
-      },
-      fail:error=>{
-        console.log(error);
-      }
-    })
+  
   },
   getUserInfo: function (e) {
     console.log(e)

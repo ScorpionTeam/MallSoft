@@ -9,7 +9,11 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     goodList: [],
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    page:{
+      pageSize:5,
+      pageNo:1
+    }
   },
   //事件处理函数
   bindViewTap: function () {
@@ -19,9 +23,10 @@ Page({
   },
   onLoad: function () {
     wx.request({
-      url: this.data.baseUrl + 'good/preferenceGiven?pageNo=1&pageSize=10',
+      url: this.data.baseUrl + 'good/preference-given?pageNo=1&pageSize=5',
       method: 'GET',
       success: res => {
+        console.log(res);
         this.setData({
           goodList:res.data.list
         })
@@ -50,9 +55,44 @@ Page({
             userInfo: res.userInfo,
             hasUserInfo: true
           })
+        },
+        fail:res=>{
+          console.log(res);
         }
       })
     }
+  },
+  /**
+  * 页面上拉触底事件的处理函数
+  */
+  onReachBottom: function () {
+    let pageNo = this.data.page.pageNo+1;
+    this.setData({
+      page:{
+        pageNo:pageNo
+      }
+    })
+    console.log(pageNo);
+    console.log(this.data.page) 
+    let url = this.data.baseUrl + 'good/preference-given?pageNo='+this.data.page.pageNo+'&pageSize=5';
+    wx.request({
+      url: url,
+      method:"GET",
+      success:res=>{
+        console.log(res);
+        if(res.statusCode==200){
+          let arr = this.data.goodList;
+          console.log(arr.push(res.data.list))
+          console.log(arr);
+          this.setData({
+            goodList:arr
+          });
+        }
+      },
+      fail:error=>{
+        console.log(error);
+      }
+    })
   },
   getUserInfo: function (e) {
     console.log(e)

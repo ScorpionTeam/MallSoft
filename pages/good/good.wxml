@@ -12,14 +12,20 @@
   <view>
     这是图文描述
   </view>
-  <view style="position:absolute;bottom:0;height:50px;background:#dc533e;width:100%;">
-    <view style="width:60px;background:#fff;heght:50px;line-height:50px;float:left;text-align:center;">
-      <image src="../../images/home-red.png" style="width:28px;height:28px;"></image>
+  <view style="position:fixed;bottom:0;height:50px;background:#dc533e;width:100%;">
+    <view style="width:60px;background:#fff;heght:50px;float:left;text-align:center;">
+      <navigator url="/pages/index/index" open-type="reLaunch" hover-class="navigator-hover">
+        <image src="../../images/home-red.png" style="width:28px;height:28px;"></image>
+        <text style="font-size:12px;display:block;text-align:center;height:20px;position:relative;top:-5px;">首页 </text>
+      </navigator>
     </view>
     <view style="color:#fff;text-align:center;height:50px;line-height:50px;">
-      <navigator url="/pages/address/address?goodId={{item.id}}" hover-class="navigator-hover">
+      <navigator url="/pages/delivery/delivery?goodId={{goodInfo.id}}" hover-class="navigator-hover">
         立即购买
       </navigator>
+      <!-- <navigator url="/pages/order/order" hover-class="navigator-hover">
+        立即购买
+      </navigator> -->
     </view>
   </view>
 </view>

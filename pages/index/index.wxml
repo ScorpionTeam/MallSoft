@@ -10,16 +10,15 @@
       <view style="font-size:16px;padding:0 40rpx;font-weight:700;">{{item.goodName}}</view>
       <view style="padding:0 40rpx;color:#8a8a8a;font:12px/1.5 tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;">
         <view style="margin-top:10px;">
-          <view style="width:40%;float:left;">来自 : 小米科技有限公司</view>
+          <view style="width:40%;float:left;">来自 : 红康科技有限公司</view>
           <view> | {{item.saleVolume}}人购买</view>
         </view>
       </view>
     </view>
-    <!--test-->
     <view>
-    <navigator url="/pages/good/good?goodId={{item.id}}" hover-class="navigator-hover">
-          <image style="width: 100%; height: 220px; background-color: #eeeeee;" src="http://haitao.nos.netease.com/il0krbeq39_800_800.jpg?imageView&thumbnail=400x0&quality=85"></image>
-        </navigator>
+      <navigator url="/pages/good/good?goodId={{item.id}}" hover-class="navigator-hover">
+        <image style="width: 100%; height: 220px; background-color: #eeeeee;" src="http://haitao.nos.netease.com/il0krbeq39_800_800.jpg?imageView&thumbnail=400x0&quality=85"></image>
+      </navigator>
     </view>
   </scroll-view>
 </view>

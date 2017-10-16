@@ -8,11 +8,15 @@ Page({
       goodInfo:{},
       url:'http://mall.test.com:8088/mall/good/goodInfo?goodId='
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.setData({
+      goodInfo:{
+        id:options.goodId
+      }
+    })
       wx.request({
         url: this.data.url+options.goodId,
         method:'GET',

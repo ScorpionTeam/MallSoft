@@ -31,6 +31,14 @@
       <view class="zan-cell__ft"></view>
     </view>
     <view class="zan-cell zan-cell--access">
+      <view class="zan-cell__bd">联系客服</view>
+      <view class="zan-cell__ft"></view>
+    </view>
+    <view class="zan-cell zan-cell--access">
+      <view class="zan-cell__bd">帮助中心</view>
+      <view class="zan-cell__ft"></view>
+    </view>
+    <view class="zan-cell zan-cell--access">
       <view class="zan-cell__bd">退出</view>
       <view class="zan-cell__ft"></view>
     </view>

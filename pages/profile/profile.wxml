@@ -1,9 +1,10 @@
 <view class="container" style="background:#ddd;">
   <view style="width:100%;height:120px;background:#fff">
     <view style="background:#424143;height:100px;width:100%;padding:10px 0;">
-        <view style="width:80px; height:80px; border-radius:50%; overflow:hidden;background:#fff;margin-left:10px;">
-          <image src="https://haitao.nos.netease.com/f9ddc412985540479e8d1a58e683ef0215083243862041.jpg?imageView&quality=98&crop=0_0_750_500&imageView&thumbnail=710x0&quality=85" style="height:80px;width:80px;"></image>
+        <view style="width:80px; height:80px; border-radius:50%; overflow:hidden;background:#fff;margin-left:10px;float:left">
+          <image src="{{userInfo.avatarUrl}}" style="height:80px;width:80px;"></image>
         </view>
+         <view style='color:#fff;font-size:12px;line-height:80px;padding:0 110px;'>{{userInfo.nickName}}</view>
     </view>
   </view>
   <view class="zan-panel" style="width:100%;margin:10px;">

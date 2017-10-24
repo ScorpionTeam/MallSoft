@@ -15,6 +15,11 @@ Page({
       pageNo:1
     }
   },
+  getPhoneNumber: function (e) {
+    console.log(e.detail.errMsg)
+    console.log(e.detail.iv)
+    console.log(e.detail.encryptedData)
+  } ,
   //事件处理函数
   bindViewTap: function () {
     wx.navigateTo({
@@ -33,11 +38,13 @@ Page({
       }
     })
     if (app.globalData.userInfo) {
+      console.log('getUserInfo0')
       this.setData({
         userInfo: app.globalData.userInfo,
         hasUserInfo: true
       })
     } else if (this.data.canIUse) {
+      console.log('getUserInfo1')
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
       // 所以此处加入 callback 以防止这种情况
       app.userInfoReadyCallback = res => {
@@ -47,6 +54,7 @@ Page({
         })
       }
     } else {
+      console.log('getUserInfo2')
       // 在没有 open-type=getUserInfo 版本的兼容处理
       wx.getUserInfo({
         success: res => {
@@ -81,8 +89,7 @@ Page({
       success:res=>{
         console.log(res);
         if(res.statusCode==200){
-          let arr = this.data.goodList;
-          arr.concat(res.data.list);
+          let arr = this.data.goodList.concat(res.data.list);
           this.setData({
             goodList:arr
           });

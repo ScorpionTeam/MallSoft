@@ -10,7 +10,7 @@
 }
 
 .container .member_card_component .member_card {
-  background: #f84322;
+  background: #e14424;
   height: 140px;
   border-radius: 10px;
   width: 100%;
@@ -26,7 +26,7 @@
 }
 
 .container .member_card_component .member_card .member_head .member_picture {
-  width: 40%;
+  width: 38%;
   height: 60px;
   border-radius: 50%;
   overflow: hidden;
@@ -81,7 +81,7 @@
   height: 60px;
   float: left;
   text-align: center;
-  font-size: 22px;
+  font-size: 30px;
   line-height: 60px;
   color: #fff;
   font-weight: 900;

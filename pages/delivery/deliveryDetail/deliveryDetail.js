@@ -23,7 +23,16 @@ Page({
     obj[n] = val.detail.value;
     this.setData(obj);
   },
-  submit() {
+  /**
+   * 初始化
+   */
+  init(id){
+    console.log(id)
+  },
+  /**
+   * 新增地址
+   */
+  add() {
     let params = {};
     params.recipients = this.data.name;
     params.phone = this.data.phone;
@@ -47,6 +56,13 @@ Page({
       }
     })
   },
+  /**
+   * 保存地址
+   */
+  save(){},
+  /**
+   * 下单
+   */
   xd() {
     let url = this.data.baseUrl + 'order/order-confirm?deliveryId=' + Number(this.data.deliveryId) + '&goodId=' + Number(this.data.goodId);
     console.log(urlT);
@@ -72,6 +88,8 @@ Page({
       wx.setNavigationBarTitle({
         title: '新增收获地址',
       })
+    }else{
+      init(options.id);      
     }
     console.log(options);
   },

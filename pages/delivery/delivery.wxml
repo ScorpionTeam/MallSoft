@@ -1,15 +1,17 @@
 <view class='delivery_list_content'>
   <view class='list_item' wx:for="{{deliveryList}}" wx:key='{{index}}' >
-    <view class='left'>
-      <view class="dot {{index==selectId?'dot_selected':''}}" bindtap='select' data-index='{{index}}'></view>
+    <view class='left' bindtap='select' data-index='{{index}}'>
+      <view class="dot {{index==selectId?'dot_selected':''}}"  ></view>
     </view>
-    <view class='mid'>
+    <view class='mid' bindtap='select' data-index='{{index}}'>
       <view class='info_person'>
         <span style="letter-spacing: 2px;">{{item.name}}</span>,{{item.mobile}}</view>
       <view class='info_address'>
         <span style="letter-spacing: 2px;">收获地址</span>： {{item.address}}</view>
     </view>
-    <view class='right'>231</view>
+    <view class='right' bindtap='skipPage' data-url='/pages/delivery/deliveryDetail/deliveryDetail?flag=0&id={{item.id}}'>
+      <image class='img' src='../../images/edit.png'></image>
+    </view>
   </view>
 </view>
 <view class='add_btn' bindtap='skipPage' data-url="/pages/delivery/deliveryDetail/deliveryDetail?flag=1" >

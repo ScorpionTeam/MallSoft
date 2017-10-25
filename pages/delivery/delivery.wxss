@@ -44,6 +44,11 @@
   top:28%;
   right: 0;
 }
+.right .img{
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+}
 .list_item:last-child{
   margin-bottom: 34px;
 }

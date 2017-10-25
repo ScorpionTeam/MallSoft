@@ -22,7 +22,7 @@
     </view>
   </view>
   <view class="zan-panel" style="width:100%;">
-    <view class="zan-cell zan-cell--access">
+    <view class="zan-cell zan-cell--access" bindtap='pageSkip' data-url="/pages/delivery/delivery">
       <view class="zan-cell__bd">收货地址</view>
       <view class="zan-cell__ft"></view>
     </view>

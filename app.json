@@ -5,13 +5,16 @@
     "pages/good/good",
     "pages/delivery/delivery",
     "pages/order/order",
-    "pages/profile/profile"
+    "pages/profile/profile",
+    "pages/wallet/wallet",
+    "pages/ticket/ticket"
   ],
   "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Mall优选",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#FAFAFA",
+    "navigationBarTitleText": "商城优选",
+    "navigationBarTextStyle": "black",
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#f9f9f9"
   },
   "tabBar": {
     "color": "#8a8a8a",

@@ -3,7 +3,7 @@
   <view>
     <image src="https://haitao.nos.netease.com/f9ddc412985540479e8d1a58e683ef0215083243862041.jpg?imageView&quality=98&crop=0_0_750_500&imageView&thumbnail=710x0&quality=85"></image>
   </view>
-  <view style="font-size:16px;padding:2px 20rpx;font-weight:700;">品牌直采】【维持泌尿健康】Swisse 高浓度蔓越莓30粒/瓶 2瓶</view>
+  <view style="font-size:16px;padding:2px 20rpx;font-weight:700;">【品牌直采】【维持泌尿健康】Swisse 高浓度蔓越莓30粒/瓶 2瓶</view>
   <view class="zan-panel" style="width:100%">
     <view class="zan-cell zan-cell--last-child">
       <view class="zan-label zan-label--primary zan-label--small">热销</view>

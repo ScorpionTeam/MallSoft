@@ -7,7 +7,7 @@
     "pages/order/order",
     "pages/profile/profile",
     "pages/wallet/wallet",
-    "pages/ticket/ticket"
+    "pages/delivery/deliveryDetail/deliveryDetail"
   ],
   "window": {
     "navigationBarBackgroundColor": "#FAFAFA",

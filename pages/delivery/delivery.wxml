@@ -1,58 +1,17 @@
-<!--收货地址选择-->
-<view class="form">
-  <form bindsubmit="formSubmit" bindreset="formReset">
-      <view class='form_item' style='border-top:1px solid #f1f1f1;'>
-        <span class='tit'>收货人</span>
-        <view class='ipt'>
-        <input placeholder='请填写收货人' bindblur="getData" data-name='name'></input>
-        </view>
-      </view>
-      <view class='form_item'>
-        <span class='tit'>联系电话</span>
-        <view class='ipt'>
-        <input placeholder='手机或固定电话' bindblur='getData' data-name='phone'></input>
-        </view>
-      </view>
-      <view class='form_item'>
-        <span class='tit '>收货地区</span>
-        <view class='area '>
-            <picker bindchange="getData" data-name='province' value="{{index}}" 
-            range="{{provList}}">
-              <view class="picker">
-                {{provList[index]}}
-              </view>
-            </picker>
-        </view>
-         <view class='area'>
-            <picker bindchange="getData" data-name='city' value="{{index}}" 
-            range="{{cityList}}">
-              <view class="picker">
-                {{cityList[index]}}
-              </view>
-            </picker>
-        </view>
-         <view class='area'>
-            <picker bindchange="getData" data-name='countryside' value="{{index}}"
-            range="{{csideList}}">
-              <view class="picker">
-                {{csideList[index]}}
-              </view>
-            </picker>
-        </view>
-      </view>
-        <view class='form_item'>
-        <span class='tit'>详细地址</span>
-        <view class='ipt'>
-        <input placeholder='街道门牌信息' bindblur='getData' data-name='address'></input>
-        </view>
-       </view>
-         <view class='form_item'>
-        <span class='tit'>邮政编码</span>
-        <view class='ipt'>
-        <input placeholder='邮政编码（选填）' bindblur='getData' data-name='code'></input>
-        </view>
-      </view>  
-      <button type="primary" bindtap="primary" class='btn' bindtap='submit'> 保存 </button>
-      <button type="primary" bindtap="primary" class='btn' bindtap='xd'> 下单</button>
-  </form>
+<view class='delivery_list_content'>
+  <view class='list_item' wx:for="{{deliveryList}}" wx:key='{{index}}' >
+    <view class='left'>
+      <view class="dot {{index==selectId?'dot_selected':''}}" bindtap='select' data-index='{{index}}'></view>
+    </view>
+    <view class='mid'>
+      <view class='info_person'>
+        <span style="letter-spacing: 2px;">{{item.name}}</span>,{{item.mobile}}</view>
+      <view class='info_address'>
+        <span style="letter-spacing: 2px;">收获地址</span>： {{item.address}}</view>
+    </view>
+    <view class='right'>231</view>
+  </view>
+</view>
+<view class='add_btn' bindtap='skipPage' data-url="/pages/delivery/deliveryDetail/deliveryDetail?flag=1" >
+  新增收货地址
 </view>

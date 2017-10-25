@@ -5,117 +5,107 @@ Page({
    * 页面的初始数据
    */
   data: {
-    goodId:'',
-    deliveryId:'',
-    provList: ['选择省份','浙江', '江苏', '安徽', '上海'],
-    cityList: ['选择城市','杭州', '南京', '合肥', '上海'],
-    csideList: ['选择地区','主城区', '鼓楼', '合肥', '徐家汇'],
-    baseUrl: 'http://mall.test.com:8088/mall/',
-    index:'0'
+    deliveryList: [
+      {
+        id: 1,
+        name: "你好",
+        mobile: "15757135983",
+        address: "中国武林路346号"
+      },
+      {
+        id: 2,
+        name: "你好",
+        mobile: "15757135983",
+        address: "中国武林路346号"
+      },
+      {
+        id: 3,
+        name: "你好",
+        mobile: "15757135983",
+        address: "中国武林路346号"
+      },
+    ],
+    selectId:0
   },
   /**
    * input输入
    */
-  getData(val){
-    let obj ={};
+  getData(val) {
+    let obj = {};
     let n = val.target.dataset.name;
-    obj[n]=val.detail.value;
+    obj[n] = val.detail.value;
     this.setData(obj);
   },
-  submit(){
-    let params = {};
-    params.recipients = this.data.name;
-    params.phone = this.data.phone;
-    params.province = this.data.province;
-    params.city = this.data.city;
-    params.area = this.data.countrySide;
-    params.address = this.data.address;
-    params.postCode = this.data.code;
-    wx.request({
-      url:this.data.baseUrl+'delivery/add',
-      method:'POST',
-      data: params,
-      success:function(res){
-        console.log(res);
-        this.setData({
-          deliveryId: res.data.data.id
-        })
-      },
-      fail:function(err){
-        console.log(err);
-      }
+  /**
+   * 
+   */
+  select(val) {
+    this.setData({
+      selectId:val.currentTarget.dataset.index
     })
   },
-  xd(){
-    let url = this.data.baseUrl + 'order/order-confirm?deliveryId=' + Number(this.data.deliveryId) + '&goodId=' + Number(this.data.goodId);
-    console.log(urlT);
-    wx.request({
+  /**
+   * 跳转
+   */
+  skipPage(val){
+    let url = val.currentTarget.dataset.url
+    wx.navigateTo({
       url: url,
-      method: 'POST',
-      success: function (res) {
-        console.log(res);
-      },
-      fail: function (err) {
-        console.log(err);
-      }
     })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      goodId:options.goodId
-    })
-    console.log(options);
+
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-  
+
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-  
+
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-  
+
   },
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+
   }
 })

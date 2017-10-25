@@ -1,8 +1,7 @@
 // pages/order/order.js
+var Zan = require('../../component/zanui-weapp/dist/tab/index');
 
-var Zan = require('../../component/zanui-weapp/dist/index');
-
-Page({
+Page(Object.assign({}, Zan, {
   data: {
     tab1: {
       list: [{
@@ -22,7 +21,8 @@ Page({
         title: '已完成'
       }],
       selectedId: 'all',
-      scroll: false
+      scroll: false,
+      fixed:true
     },
     tab2: {
       list: [{
@@ -73,76 +73,67 @@ Page({
       height: 45
     }
   },
-
   handleZanTabChange(e) {
     var componentId = e.componentId;
     var selectedId = e.selectedId;
-    console.log('sit')
     this.setData({
       [`${componentId}.selectedId`]: selectedId
     });
-  }
-},{
-  /**
-   * 页面的初始数据
-   */
-  data: {
-    
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-  
+
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-  
+
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-  
+
   },
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+
   }
-})
+}))

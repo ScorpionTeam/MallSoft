@@ -10,22 +10,23 @@ Page({
     hasUserInfo: false,
     goodList: [],
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    page:{
-      pageSize:5,
-      pageNo:1
+    page: {
+      pageSize: 5,
+      pageNo: 1
     },
-    lastPage:false
+    lastPage: false
   },
   // 上拉加载
-  pullUp:function(){
+  pullUp: function () {
     //最后一页，不再进行请求
-    if(this.data.lastPage){
+    if (this.data.lastPage) {
       wx.showToast({
-        title:'没有啦'
+        title: '没有啦'
       });
-      return ;
+      return;
     }
     let pageNo = this.data.page.pageNo + 1;
+    console.log(pageNo);
     this.setData({
       page: {
         pageNo: pageNo
@@ -44,21 +45,23 @@ Page({
           let arr = this.data.goodList.concat(res.data.list);
           this.setData({
             goodList: arr,
-            lastPage:res.data.lastPage
+            lastPage: res.data.lastPage
           });
           wx.hideLoading();
         }
       },
       fail: error => {
+        wx.hideLoading();
         console.log(error);
       }
     })
   },
+  /**获取手机号 */
   getPhoneNumber: function (e) {
     console.log(e.detail.errMsg)
     console.log(e.detail.iv)
     console.log(e.detail.encryptedData)
-  } ,
+  },
   //事件处理函数
   bindViewTap: function () {
     wx.navigateTo({
@@ -68,9 +71,9 @@ Page({
   onLoad: function () {
     wx.authorize({
       scope: 'scope.userInfo',
-      success:res=>{
+      success: res => {
         wx.getUserInfo({
-          success:res=>{
+          success: res => {
             console.log(res);
           }
         })
@@ -82,7 +85,7 @@ Page({
       success: res => {
         console.log(res);
         this.setData({
-          goodList:res.data.list
+          goodList: res.data.list
         })
       }
     })
@@ -110,7 +113,7 @@ Page({
             hasUserInfo: true
           })
         },
-        fail:res=>{
+        fail: res => {
           console.log(res);
         }
       })
@@ -120,33 +123,33 @@ Page({
   * 页面上拉触底事件的处理函数
   */
   onReachBottom: function () {
-    let pageNo = this.data.page.pageNo+1;
-    this.setData({
-      page:{
-        pageNo:pageNo
-      }
-    })
-    console.log(pageNo);
-    console.log(this.data.page) 
-    let url = this.data.baseUrl + 'good/preference-given?pageNo='+this.data.page.pageNo+'&pageSize=5';
-    wx.request({
-      url: url,
-      method:"GET",
-      success:res=>{
-        console.log(res);
-        if(res.statusCode==200){
-          let arr = this.data.goodList;
-          arr.concat(res.data.list);
-          this.setData({
-            goodList:arr
-          });
-          console.log(this.data.goodList);
-        }
-      },
-      fail:error=>{
-        console.log(error);
-      }
-    })
+    // let pageNo = this.data.page.pageNo + 1;
+    // this.setData({
+    //   page: {
+    //     pageNo: pageNo
+    //   }
+    // })
+    // console.log(pageNo);
+    // console.log(this.data.page)
+    // let url = this.data.baseUrl + 'good/preference-given?pageNo=' + this.data.page.pageNo + '&  pageSize=5';
+    // wx.request({
+    //   url: url,
+    //   method: "GET",
+    //   success: res => {
+    //     console.log(res);
+    //     if (res.statusCode == 200) {
+    //       let arr = this.data.goodList;
+    //       arr.concat(res.data.list);
+    //       this.setData({
+    //         goodList: arr
+    //       });
+    //       console.log(this.data.goodList);
+    //     }
+    //   },
+    //   fail: error => {
+    //     console.log(error);
+    //   }
+    // })
   },
   getUserInfo: function (e) {
     console.log(e)

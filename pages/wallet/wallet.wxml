@@ -1,0 +1,13 @@
+<view class="container">
+  <view style="width:100%;">
+    <view style="background:#ddd;width:48%;height:100px;float:left;margin-left:6px;text-align:center;line-height:100px;">
+      余额0(元)
+    </view>
+    <view style="background:#ddd;width:48%;height:100px;float:left;margin-left:3px;text-align:center;line-height:100px;">
+      提现
+    </view>
+  </view>
+  <view style='width:94%;margin-top:10px;'>
+    <button class="zan-btn zan-btn--large zan-btn--primary">充值</button>
+  </view>
+</view>

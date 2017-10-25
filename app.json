@@ -4,7 +4,8 @@
     "pages/logs/logs",
     "pages/good/good",
     "pages/delivery/delivery",
-    "pages/order/order"
+    "pages/order/order",
+    "pages/profile/profile"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -15,25 +16,25 @@
   "tabBar": {
     "color": "#8a8a8a",
     "selectedColor": "#d81e06",
-    "borderStyle": "white",
+    "borderStyle": "grey",
     "list": [
       {
         "selectedIconPath": "images/home-red.png",
         "iconPath": "images/home-default.png",
         "pagePath": "pages/index/index",
-        "text": "首页"
+        "text": "优选"
       },
       {
         "selectedIconPath": "images/order-red.png",
         "iconPath": "images/order-default.png",
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/order/order",
         "text": "订单"
       },
       {
         "selectedIconPath": "images/me-red.png",
         "iconPath": "images/me-default.png",
-        "pagePath": "pages/index/index",
-        "text": "我"
+        "pagePath": "pages/profile/profile",
+        "text": "我的"
       }
     ]
   }

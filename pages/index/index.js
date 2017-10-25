@@ -54,6 +54,11 @@ Page({
       }
     })
   },
+  getPhoneNumber: function (e) {
+    console.log(e.detail.errMsg)
+    console.log(e.detail.iv)
+    console.log(e.detail.encryptedData)
+  } ,
   //事件处理函数
   bindViewTap: function () {
     wx.navigateTo({
@@ -75,6 +80,7 @@ Page({
       url: this.data.baseUrl + 'good/preference-given?pageNo=1&pageSize=5',
       method: 'GET',
       success: res => {
+        console.log(res);
         this.setData({
           goodList:res.data.list
         })
@@ -114,7 +120,33 @@ Page({
   * 页面上拉触底事件的处理函数
   */
   onReachBottom: function () {
-  
+    let pageNo = this.data.page.pageNo+1;
+    this.setData({
+      page:{
+        pageNo:pageNo
+      }
+    })
+    console.log(pageNo);
+    console.log(this.data.page) 
+    let url = this.data.baseUrl + 'good/preference-given?pageNo='+this.data.page.pageNo+'&pageSize=5';
+    wx.request({
+      url: url,
+      method:"GET",
+      success:res=>{
+        console.log(res);
+        if(res.statusCode==200){
+          let arr = this.data.goodList;
+          arr.concat(res.data.list);
+          this.setData({
+            goodList:arr
+          });
+          console.log(this.data.goodList);
+        }
+      },
+      fail:error=>{
+        console.log(error);
+      }
+    })
   },
   getUserInfo: function (e) {
     console.log(e)

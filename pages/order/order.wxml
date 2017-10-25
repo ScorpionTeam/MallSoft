@@ -1,4 +1,4 @@
-<view class='order'>
+<!-- <view class='order'>
   <view class='add'></view>
   <view class='order_body'>
     <view class='order_body_company'></view>
@@ -10,4 +10,11 @@
     <view class='order_body_moneyDetail'></view>
   </view>
   <view class='footer'></view>
+</view> -->
+<import src="../../component/zanui-weapp/dist/tab/index.wxml" />
+<view class="container">
+
+<view style="margin: 20px 0">
+    <template is="zan-tab" data="{{tab: tab1, componentId: 'tab1'}}"></template>
+  </view>
 </view>

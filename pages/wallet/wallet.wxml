@@ -1,4 +1,11 @@
+<import src="../../component/zanui-weapp/dist/noticebar/index.wxml" />
 <view class="container">
+  <view class="zan-panel" style="width:100%;">
+    <template
+      is="zan-noticebar"
+      data="{{ ...movable, componentId: 'movable'  }}"
+    ></template>
+  </view>
   <view style="width:100%;">
     <view style="background:#ddd;width:48%;height:100px;float:left;margin-left:6px;text-align:center;line-height:100px;">
       余额0(元)

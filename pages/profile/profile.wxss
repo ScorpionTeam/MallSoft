@@ -1,1 +1,89 @@
 /* pages/my/my.wxss */
+
+.container {
+  background: #f0f0f0;
+}
+
+.container .member_card_component {
+  width: 360px;
+  height: 150px;
+}
+
+.container .member_card_component .member_card {
+  background: #f84322;
+  height: 140px;
+  border-radius: 10px;
+  width: 360px;
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.container .member_card_component .member_card .member_head {
+  height: 80px;
+  width: 50%;
+  float: left;
+}
+
+.container .member_card_component .member_card .member_head .member_picture {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 10px;
+  float: left;
+}
+
+.container .member_card_component .member_card .member_head .member_picture image {
+  height: 60px;
+  width: 60px;
+}
+
+.container .member_card_component .member_card .member_head .member_name_sex {
+  width: 100px;
+  float: left;
+  height: 80px;
+  color: #fff;
+  line-height: 28px;
+  padding-left: 10px;
+}
+
+.container .member_card_component .member_card .member_head .member_name_sex .member_name {
+  float: left;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.container .member_card_component .member_card .member_head .member_name_sex .member_sex {
+  float: left;
+  width: 100%;
+}
+
+.container .member_card_component .member_card .member_info {
+  width: 50%;
+  color: #fff;
+  float: left;
+}
+
+.container .member_card_component .member_card .member_info .member_info_detail {
+  width: 120px;
+  height: 80px;
+  line-height: 28px;
+}
+
+.container .member_card_component .member_card .member_info .member_info_detail .member_point {
+  padding-top: 20px;
+}
+
+.container .member_card_component .member_card .member_card_no {
+  width: 100%;
+  height: 60px;
+  float: left;
+  text-align: center;
+  font-size: 22px;
+  line-height: 60px;
+  color: #fff;
+  font-weight: 900;
+}

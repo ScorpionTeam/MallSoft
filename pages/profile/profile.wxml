@@ -1,23 +1,33 @@
-<view class="container" style="background:#ddd;">
-  <view style="width:100%;;height:120px;">
-    <view style="background:#ff5f3a;height:108px;width:100%;padding:14px 0;">
-      <view style="width:60px; height:60px; border-radius:50%;line-height:60px; overflow:hidden;margin-left:10px;float:left">
-        <image src="{{userInfo.avatarUrl}}" style="height:60px;width:60px;"></image>
+<view class="container">
+  <view class="member_card_component">
+    <view class="member_card">
+      <view class="member_head">
+        <view class="member_picture">
+          <image src="{{userInfo.avatarUrl}}"></image>
+        </view>
+        <view class="member_name_sex">
+          <view class="member_name">昵称 {{userInfo.nickName}}</view>
+          <view class="member_sex">性别 {{userInfo.gender}}</view>
+        </view>
       </view>
-      <view style='color:#fff;font-size:12px;line-height:60px;padding:0 100px;'>{{userInfo.nickName}}</view>
+      <view class="member_info">
+        <view class="member_info_detail">
+          <view class="member_point">积分 100000</view>
+          <view class="member_level">等级 白金会员</view>
+        </view>
+      </view>
+      <view class="member_card_no" style="">
+        1234567890987623
+      </view>
     </view>
   </view>
-  <view class="zan-panel" style="width:100%;margin:10px;">
+  <view class="zan-panel" style="width:100%;">
     <view class="zan-cell zan-cell--access">
       <view class="zan-cell__bd">收货地址</view>
       <view class="zan-cell__ft"></view>
     </view>
     <view class="zan-cell zan-cell--access">
-      <view class="zan-cell__bd">优惠券</view>
-      <view class="zan-cell__ft"></view>
-    </view>
-    <view class="zan-cell zan-cell--access">
-      <view class="zan-cell__bd">积分</view>
+      <view class="zan-cell__bd">卡包</view>
       <view class="zan-cell__ft"></view>
     </view>
     <navigator url="/pages/wallet/wallet" hover-class="navigator-hover">

@@ -1,4 +1,4 @@
-<view class="container">
+<!-- <view class="container">
   <scroll-view scroll-y="true" style="height:600px" upper-threshold="10" lower-threshold="1" bindscrolltolower='pullUp'>
     <view style="background-image:-webkit-linear-gradient(-180deg, #d97925, #e14424);background-image:linear-gradient(-180deg,#d97925, #e14424);color:#fff;width:100%;height:140px;border-radius:10px;margin:4px 0">
       <view style="width:50%;height:100%">
@@ -57,4 +57,25 @@
     </view>
   </scroll-view>
 
+</view> -->
+<view class="ticket_container">
+    <view class='ticket_item' wx:for="{{ticketList}}">
+      <view class='ticket_content'>
+        <view class='content_lf'>
+          ¥ <span class='money'>{{item.money}}</span>
+        </view>
+        <view class='content_rg'>
+          <view class='least_money'>满{{item.least}}可用</view>
+          <view class='use_range'>{{item.range}}</view>
+        </view>
+      </view>
+      <view class='ticket_footer'>
+         <span class='footer_lf'>
+          {{item.type}}
+        </span>
+        <span class='footer_rg'>
+        {{item.timeRange}}
+        </span>
+      </view>
+    </view>
 </view>

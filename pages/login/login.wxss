@@ -1,0 +1,27 @@
+.login_container{
+  width: 95%;
+  height: 360rpx;
+  margin: 0 auto;
+  background: #fff;
+}
+.login_form{
+  width: 95%;
+  margin: 0 auto;
+  margin-bottom: 30rpx;
+}
+.code_btn{
+  width: 195rpx;
+  text-align: center;
+}
+.disabled{
+  background:#f9f9f9;
+  border-color:#f9f9f9;
+  color:#d1d1d1;
+}
+/*登录按钮*/
+.btn{
+  color:#fff;
+  width:95%;
+  letter-spacing:2px;
+  margin:0 auto;
+}

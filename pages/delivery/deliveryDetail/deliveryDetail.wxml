@@ -4,22 +4,21 @@
       <view class='form_item' style='border-top:1px solid #f1f1f1;'>
         <span class='tit'>收货人</span>
         <view class='ipt'>
-        <input placeholder='请填写收货人' bindblur="getData" data-name='name'></input>
+        <input placeholder='请填写收货人' bindblur="getData" data-name='name'>{{name}}</input>
         </view>
       </view>
       <view class='form_item'>
         <span class='tit'>联系电话</span>
         <view class='ipt'>
-        <input placeholder='手机或固定电话' bindblur='getData' data-name='phone'></input>
+        <input placeholder='手机或固定电话' bindblur='getData' data-name='phone'>{{phone}}</input>
         </view>
       </view>
       <view class='form_item'>
         <span class='tit '>收货地区</span>
         <view class='area '>
-            <picker bindchange="getData" data-name='province' value="{{index}}" 
-            range="{{provList}}">
-              <view class="picker">
-                {{provList[index]}}
+            <picker  bindchange="getData" data-name='province' value="{{index}}" range="{{cityList}}">
+              <view class="val">
+                {{cityList[index]}}
               </view>
             </picker>
         </view>
@@ -43,16 +42,16 @@
         <view class='form_item'>
         <span class='tit'>详细地址</span>
         <view class='ipt'>
-        <input placeholder='街道门牌信息' bindblur='getData' data-name='address'></input>
+        <input placeholder='街道门牌信息' bindblur='getData' data-name='address'>{{address}}</input>
         </view>
        </view>
          <view class='form_item'>
         <span class='tit'>邮政编码</span>
         <view class='ipt'>
-        <input placeholder='邮政编码（选填）' bindblur='getData' data-name='code'></input>
+        <input placeholder='邮政编码（选填）' bindblur='getData' data-name='code'>{{code}}</input>
         </view>
       </view>  
-      <button type="primary" bindtap="primary" class='btn' bindtap='submit'> 保存 </button>
-      <button type="primary" bindtap="primary" class='btn' bindtap='xd'> 下单</button>
+      <button type="primary" bindtap="primary" class='btn zan-btn--large' bindtap='submit'> 保存 </button>
+      <button type="default" bindtap="primary" class='btn zan-btn--large' bindtap='del' wx:if='{{delFlag}}'> 删除收获地址</button>
   </form>
 </view>

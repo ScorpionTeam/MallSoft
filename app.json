@@ -10,7 +10,7 @@
     "pages/delivery/deliveryDetail/deliveryDetail"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#FAFAFA",
+    "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "商城优选",
     "navigationBarTextStyle": "black",
     "backgroundTextStyle": "dark",

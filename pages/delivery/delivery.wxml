@@ -1,7 +1,9 @@
 <view class='delivery_list_content'>
   <view class='list_item' wx:for="{{deliveryList}}" wx:key='{{index}}' >
     <view class='left' bindtap='select' data-index='{{index}}'>
-      <view class="dot {{index==selectId?'dot_selected':''}}"  ></view>
+      <view class="dot class='{{index==selectId?'dot_selected':''}}">
+        <image src='../../images/gou.png' class='.gou'></image>
+      </view>
     </view>
     <view class='mid' bindtap='select' data-index='{{index}}'>
       <view class='info_person'>

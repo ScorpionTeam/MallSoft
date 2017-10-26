@@ -26,7 +26,7 @@
       <view class="zan-cell__bd">收货地址</view>
       <view class="zan-cell__ft"></view>
     </view>
-    <view class="zan-cell zan-cell--access">
+    <view class="zan-cell zan-cell--access" bindtap='pageSkip' data-url='/pages/ticket/ticket'>
       <view class="zan-cell__bd">卡包</view>
       <view class="zan-cell__ft"></view>
     </view>
@@ -38,17 +38,6 @@
     </navigator>
   </view>
   <view class="zan-panel" style="width:100%;margin:10px;">
-    <navigator>
-
-      <view class="zan-cell zan-cell--access">
-        <view class="zan-cell__bd">退换货</view>
-        <view class="zan-cell__ft"></view>
-      </view>
-    </navigator>
-    <view class="zan-cell zan-cell--access">
-      <view class="zan-cell__bd">关于</view>
-      <view class="zan-cell__ft"></view>
-    </view>
     <view class="zan-cell zan-cell--access">
       <view class="zan-cell__bd">联系客服</view>
       <view class="zan-cell__ft"></view>
@@ -61,5 +50,5 @@
       <view class="zan-cell__bd">退出</view>
       <view class="zan-cell__ft"></view>
     </view>
-    </view>
-    </view>
+  </view>
+</view>

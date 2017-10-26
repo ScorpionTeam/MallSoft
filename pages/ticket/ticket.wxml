@@ -1,3 +1,60 @@
 <view class="container">
-  优惠券
+  <scroll-view scroll-y="true" style="height:600px" upper-threshold="10" lower-threshold="1" bindscrolltolower='pullUp'>
+    <view style="background-image:-webkit-linear-gradient(-180deg, #d97925, #e14424);background-image:linear-gradient(-180deg,#d97925, #e14424);color:#fff;width:100%;height:140px;border-radius:10px;margin:4px 0">
+      <view style="width:50%;height:100%">
+        <view style="font-size:20px;font-weight:900;margin:auto;height:70px;line-height:70px;">
+          橙妆
+        </view>
+        <view style="height:50%;width:100%;">
+          通用券
+        </view>
+        <view>
+        </view>
+      </view>
+      <view>
+      ￥5
+      </view>
+
+    </view>
+    <view style="background-image:-webkit-linear-gradient(-180deg, #d97925, #e14424);background-image:linear-gradient(-180deg,#d97925, #e14424);color:#fff;width:100%;height:140px;border-radius:10px;margin:4px 0">
+      <view>
+        <view>
+          橙妆
+        </view>
+        <view>
+        </view>
+      </view>
+      <view>
+      ￥5
+      </view>
+
+    </view>
+    <view style="background-image:-webkit-linear-gradient(-180deg, #d97925, #e14424);background-image:linear-gradient(-180deg,#d97925, #e14424);color:#fff;width:100%;height:140px;border-radius:10px;margin:4px 0">
+      <view>
+        <view>
+          橙妆
+        </view>
+        <view>
+        </view>
+      </view>
+      <view>
+      ￥5
+      </view>
+
+    </view>
+    <view style="background-image:-webkit-linear-gradient(-180deg, #d97925, #e14424);background-image:linear-gradient(-180deg,#d97925, #e14424);color:#fff;width:100%;height:140px;border-radius:10px;margin:4px 0">
+      <view>
+        <view>
+          橙妆
+        </view>
+        <view>
+        </view>
+      </view>
+      <view>
+      ￥5
+      </view>
+
+    </view>
+  </scroll-view>
+
 </view>

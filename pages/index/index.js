@@ -1,8 +1,18 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
-Page({
+var Zan = require('../../component/zanui-weapp/dist/index');
+Page(Object.assign({}, Zan.NoticeBar, {
+  data: {
+    movable: {
+      text: '每天多奋斗一点,也为自己老去后以免遗憾年轻时的一事无成.每天多奋斗一点,也为自己老去后以免遗憾年轻时的一事无成.'
+    }
+  },
+  onShow() {
+    // 滚动通告栏需要initScroll
+    this.initZanNoticeBarScroll('movable');
+  }
+}),{
   data: {
     motto: 'Hello World',
     baseUrl: 'http://mall.test.com:8088/mall/',

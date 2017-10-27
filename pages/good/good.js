@@ -6,7 +6,22 @@ Page({
    */
   data: {
       goodInfo:{},
-      url:'http://mall.test.com:8088/mall/good/goodInfo?goodId='
+      url:'http://mall.test.com:8088/mall/good/goodInfo?goodId=',
+      showDialog:false//dialog开关
+  },
+  /**
+   * 打开dialog
+   */
+  toggleDialog(){
+    this.setData({
+      showDialog:!this.data.showDialog
+    })
+  },
+  /**
+   * 打开选择数量页面
+   */
+  openDialog(){
+    
   },
   /**
    * 生命周期函数--监听页面加载

@@ -2,18 +2,11 @@
 //获取应用实例
 const app = getApp()
 var Zan = require('../../component/zanui-weapp/dist/index');
-Page(Object.assign({}, Zan.NoticeBar, {
+var Hongbao = require('../../common/template/hongbao/hongbao');
+Page(Object.assign({}, Zan.NoticeBar,Hongbao,{
   data: {
-    movable: {
-      text: '每天多奋斗一点,也为自己老去后以免遗憾年轻时的一事无成.每天多奋斗一点,也为自己老去后以免遗憾年轻时的一事无成.'
-    }
-  },
-  onShow() {
-    // 滚动通告栏需要initScroll
-    this.initZanNoticeBarScroll('movable');
-  }
-}),{
-  data: {
+    test:false,
+    activityShow:false,//红包活动显示标识
     motto: 'Hello World',
     baseUrl: 'http://mall.test.com:8088/mall/',
     userInfo: {},
@@ -24,7 +17,14 @@ Page(Object.assign({}, Zan.NoticeBar, {
       pageSize: 5,
       pageNo: 1
     },
-    lastPage: false
+    lastPage: false,
+    movable: {
+      text: '每天多奋斗一点,也为自己老去后以免遗憾年轻时的一事无成.每天多奋斗一点,也为自己老去后以免遗憾年轻时的一事无成.'
+    }
+  },
+  onShow() {
+    // 滚动通告栏需要initScroll
+    this.initZanNoticeBarScroll('movable');
   },
   // 上拉加载
   pullUp: function () {
@@ -169,4 +169,4 @@ Page(Object.assign({}, Zan.NoticeBar, {
       hasUserInfo: true
     })
   }
-})
+}))

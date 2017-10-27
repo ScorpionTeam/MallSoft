@@ -1,29 +1,55 @@
 <!--good商品详情页-->
-<view class="container">
-  <view>
-    <image src="https://haitao.nos.netease.com/f9ddc412985540479e8d1a58e683ef0215083243862041.jpg?imageView&quality=98&crop=0_0_750_500&imageView&thumbnail=710x0&quality=85"></image>
-  </view>
-  <view style="font-size:16px;padding:2px 20rpx;font-weight:700;">【品牌直采】【维持泌尿健康】Swisse 高浓度蔓越莓30粒/瓶 2瓶</view>
-  <view class="zan-panel" style="width:100%">
-    <view class="zan-cell zan-cell--last-child">
-      <view class="zan-label zan-label--primary zan-label--small">热销</view>
+<view class="good_container">
+  <view class='good_north '>
+    <view class='good_scroll border_north'>
+      <image src="https://haitao.nos.netease.com/f9ddc412985540479e8d1a58e683ef0215083243862041.jpg?imageView&quality=98&crop=0_0_750_500&imageView&thumbnail=710x0&quality=85"></image>
+    </view>
+    <view class='good_price border_north'>
+      【品牌直采】【维持泌尿健康】Swisse 高浓度蔓越莓30粒/瓶 2瓶
+      <view class='single_price'>¥ 1100</view>
+    </view>
+    <view class='good_selled'>
+      <span class='sell_item'>运费:免运费 </span>
+      <span class='sell_item'>剩余:1100 </span>
+      <span class='sell_item'>销售:2200 </span>
     </view>
   </view>
-  <view style='height:400px;'>
-    描述
+  <view class='good_south'>
+    <view class='shop_type'>
+      <view class='zan-icon zan-icon-certificate type_item'>
+        <span class='word'>企业认证</span>
+      </view>
+    </view>
+    <view class='pic_introduce'>
+    </view>
   </view>
-  <view style="width:100%;height:200px;line-height:200px;background:#ddd;text-align:center;font-size=12px;color:#fff">
-    Scropion 技术支持
-  </view>
-  <view style="position:fixed;bottom:0;height:50px;background:#dc533e;width:100%;">
-    <view style="width:60px;background:#fff;heght:50px;float:left;text-align:center;">
-      <navigator url="/pages/index/index" open-type="reLaunch" hover-class="navigator-hover">
-        <view class="icon-wrap" style='height:50px;'>
-          <view class="zan-icon zan-icon-home" style="font-size: 20px; color: #ff4343;"></view>
-          <view class="icon-classname" style="font-size:12px;color: #ff4343;">首页</view>
+</view>
+<view class="zan-dialog {{ showDialog ? 'zan-dialog--show' : '' }}">
+  <view class="zan-dialog__mask" bindtap="toggleDialog" />
+  <view class="zan-dialog__container">
+    <view>
+      <view class='confirm_content'>
+        <view class='confirm_good_info'>
+          <image class='confirm_pic' src="https://haitao.nos.netease.com/f9ddc412985540479e8d1a58e683ef0215083243862041.jpg?imageView&quality=98&crop=0_0_750_500&imageView&thumbnail=710x0&quality=85"></image>
+          <view class='confirm_good_introduce'>
+           <view>【品牌直采】【维持泌尿健康】Swisse 高浓度蔓越莓30粒/瓶 2瓶</view>
+           <view class='confirm_single_price'>¥ 1100</view>
+          </view>
         </view>
-      </navigator>
+        <view class='confirm_good_count'></view>
+      </view>
+      <button class='zan-btn zan-btn--large zan-btn--danger' style='height:100rpx;'>下一步</button>
     </view>
-    <button class="zan-btn zan-btn--large zan-btn--danger">立即下单</button>
   </view>
+</view>
+<view class='order_btn'>
+  <view class='back'>
+    <navigator url="/pages/index/index" open-type="reLaunch" hover-class="navigator-hover">
+      <view class="icon-wrap" style='height:100rpx;'>
+        <view class="zan-icon zan-icon-home" style="font-size: 40rpx; color: #ff4343;margin:8rpx;"></view>
+        <view class="icon-classname" style="font-size:24rpx;color: #ff4343;">首页</view>
+      </view>
+    </navigator>
+  </view>
+  <button class="zan-btn zan-btn--large zan-btn--danger" bindtap='toggleDialog'>立即下单</button>
 </view>

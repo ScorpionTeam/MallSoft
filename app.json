@@ -9,7 +9,8 @@
     "pages/wallet/wallet",
     "pages/ticket/ticket",
     "pages/delivery/deliveryDetail/deliveryDetail",
-    "pages/login/login"
+    "pages/login/login",
+    "pages/help/help"
   ],
   "window": {
     "navigationBarBackgroundColor": "#fff",

@@ -1,0 +1,9 @@
+.content_detail_e_1 {
+        margin-top: 10rpx;
+        font-size: 28rpx;
+}
+
+.content_detail_e_2 {
+        margin-top: 40rpx;
+        font-size: 24rpx;
+}

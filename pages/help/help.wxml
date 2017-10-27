@@ -1,0 +1,3 @@
+<import src="./help_template/help_detail_e.wxml"/> 
+
+<template is="template_help_main" ></template>

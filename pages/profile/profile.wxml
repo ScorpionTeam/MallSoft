@@ -46,7 +46,7 @@
     </view>
   </view>
   <view class="zan-panel">
-    <view class="zan-cell zan-cell--access">
+    <view class="zan-cell zan-cell--access" bindtap="pageSkip"  data-url='/pages/help/help'>
       <view class="zan-cell__bd">帮助中心</view>
       <view class="zan-cell__ft"></view>
     </view>

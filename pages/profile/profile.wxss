@@ -1,7 +1,7 @@
 /* pages/my/my.wxss */
 
 .container {
-   background: #f9f9f9; 
+  background: #F9F9F9;
 }
 
 .container .member_card_component {
@@ -86,4 +86,7 @@
   line-height: 120rpx;
   color: #fff;
   font-weight: 900;
+}
+.zan-panel{
+  width:100%;
 }

@@ -8,7 +8,8 @@
     "pages/profile/profile",
     "pages/wallet/wallet",
     "pages/ticket/ticket",
-    "pages/delivery/deliveryDetail/deliveryDetail"
+    "pages/delivery/deliveryDetail/deliveryDetail",
+    "pages/login/login"
   ],
   "window": {
     "navigationBarBackgroundColor": "#fff",

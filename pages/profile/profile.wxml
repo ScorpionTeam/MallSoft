@@ -32,8 +32,6 @@
       <view class="zan-cell__bd">卡包</view>
       <view class="zan-cell__ft"></view>
     </view>
-  </view>
-  <view class="zan-panel">
     <view class="zan-cell zan-cell--access" bindtap="pageSkip" data-url="/pages/wallet/wallet">
       <view class="zan-cell__bd">钱包</view>
       <view class="zan-cell__ft"></view>
@@ -44,9 +42,13 @@
       <view class="zan-cell__bd">联系客服</view>
       <view class="zan-cell__ft"></view>
     </view>
+<<<<<<< HEAD
   </view>
   <view class="zan-panel">
     <view class="zan-cell zan-cell--access" bindtap="pageSkip"  data-url='/pages/help/help'>
+=======
+    <view class="zan-cell zan-cell--access">
+>>>>>>> 9295a305d9b0ffe7c0b9eb5ef640196db840e035
       <view class="zan-cell__bd">帮助中心</view>
       <view class="zan-cell__ft"></view>
     </view>

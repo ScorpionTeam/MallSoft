@@ -1,0 +1,12 @@
+.hongbao_img {
+  width: 150rpx;
+  height: 100rpx;
+  object-fit: cover;
+}
+
+.hongbao_fix{
+  position:fixed;
+  bottom:20rpx;
+  right:0;
+  z-index:999;
+}

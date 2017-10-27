@@ -1,0 +1,9 @@
+<template name="hongbao">
+  <view>
+  </view>
+</template>
+<template name="hongbaoFix">
+  <view class='hongbao_fix' bindtap='open'  data-openFlag="{{openFlag}}">
+    <image src='/images/hongbao.png' class='hongbao_img'></image>
+  </view>
+</template>

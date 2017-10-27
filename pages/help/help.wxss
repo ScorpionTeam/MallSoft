@@ -1,0 +1,38 @@
+/* pages/help/help.wxss */
+
+.help_container {
+        width: 100%;
+        background-color: white;
+}
+
+.hepl_content_a {
+        background-color: white;
+        height: 160rpx;
+        padding-left: 40rpx;
+}
+
+.hepl_content_a {
+        background-color: white;
+}
+
+.hepl_tips_a {
+        margin-top: 20rpx;
+        color: #999;
+        font-size: 24rpx;
+}
+
+.help_image_tel {
+        width: 100rpx;
+        height: 100rpx;
+}
+
+.help_content_c {
+        margin-left: 160rpx;
+        width: 100%;
+}
+
+.help_content_c.tal_sp {
+        margin-left: 20rpx;
+        color: #f30;
+        font-size: 22rpx;
+}

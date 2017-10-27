@@ -17,11 +17,11 @@
 .ticket_content {
   height: 150rpx;
   padding: 20rpx 0;
-  border: 1px solid red;
+  border: 1px solid #e14424;
   border-bottom: 0;
   border-top-left-radius: 14rpx;
   border-top-right-radius: 14rpx;
-  color: red;
+  color: #e14424;
 }
 
 .content_lf {
@@ -53,9 +53,9 @@
 /*卡券底部*/
 
 .ticket_footer {
-  border-left: 1px solid red;
-  border-right: 1px solid red;
-  background: red;
+  border-left: 1px solid #e14424;
+  border-right: 1px solid #e14424;
+  background: #e14424;
   height: 70rpx;
   color: #fff;
   font-size: 28rpx;

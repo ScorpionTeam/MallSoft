@@ -1,62 +1,59 @@
 <view class="container">
-  <view class="member_card_component">
-    <view class="member_card">
-      <view class="member_head">
-        <view class="member_picture">
-          <image src="{{userInfo.avatarUrl}}"></image>
+        <view class="member_card_component">
+                <view class="member_card">
+                        <view class="member_head">
+                                <view class="member_picture">
+                                        <image src="{{userInfo.avatarUrl}}"></image>
+                                </view>
+                                <view class="member_name_sex">
+                                        <view class="member_name">昵称 {{userInfo.nickName}}</view>
+                                        <view class="member_sex">性别 {{userInfo.gender}}</view>
+                                </view>
+                        </view>
+                        <view class="member_info">
+                                <view class="member_info_detail">
+                                        <view class="member_point">积分 100000</view>
+                                        <view class="member_level">等级 白金会员</view>
+                                </view>
+                        </view>
+                        <view class="member_card_no" style="">
+                                1234567890987623
+                        </view>
+                </view>
         </view>
-        <view class="member_name_sex">
-          <view class="member_name">昵称 {{userInfo.nickName}}</view>
-          <view class="member_sex">性别 {{userInfo.gender}}</view>
+        <view class="zan-panel">
+                <view class="zan-cell zan-cell--access" bindtap='pageSkip' data-url="/pages/delivery/delivery">
+                        <view class="zan-cell__bd">收货地址</view>
+                        <view class="zan-cell__ft"></view>
+                </view>
         </view>
-      </view>
-      <view class="member_info">
-        <view class="member_info_detail">
-          <view class="member_point">积分 100000</view>
-          <view class="member_level">等级 白金会员</view>
+        <view class="zan-panel">
+                <view class="zan-cell zan-cell--access" bindtap='pageSkip' data-url='/pages/ticket/ticket'>
+                        <view class="zan-cell__bd">卡包</view>
+                        <view class="zan-cell__ft"></view>
+                </view>
+                <view class="zan-cell zan-cell--access" bindtap="pageSkip" data-url="/pages/wallet/wallet">
+                        <view class="zan-cell__bd">钱包</view>
+                        <view class="zan-cell__ft"></view>
+                </view>
         </view>
-      </view>
-      <view class="member_card_no" style="">
-        1234567890987623
-      </view>
-    </view>
-  </view>
-  <view class="zan-panel">
-    <view class="zan-cell zan-cell--access" bindtap='pageSkip' data-url="/pages/delivery/delivery">
-      <view class="zan-cell__bd">收货地址</view>
-      <view class="zan-cell__ft"></view>
-    </view>
-  </view>
-  <view class="zan-panel">
-    <view class="zan-cell zan-cell--access" bindtap='pageSkip' data-url='/pages/ticket/ticket'>
-      <view class="zan-cell__bd">卡包</view>
-      <view class="zan-cell__ft"></view>
-    </view>
-    <view class="zan-cell zan-cell--access" bindtap="pageSkip" data-url="/pages/wallet/wallet">
-      <view class="zan-cell__bd">钱包</view>
-      <view class="zan-cell__ft"></view>
-    </view>
-  </view>
-  <view class="zan-panel">
-    <view class="zan-cell zan-cell--access">
-      <view class="zan-cell__bd">联系客服</view>
-      <view class="zan-cell__ft"></view>
-    </view>
-<<<<<<< HEAD
-  </view>
-  <view class="zan-panel">
-    <view class="zan-cell zan-cell--access" bindtap="pageSkip"  data-url='/pages/help/help'>
-=======
-    <view class="zan-cell zan-cell--access">
->>>>>>> 9295a305d9b0ffe7c0b9eb5ef640196db840e035
-      <view class="zan-cell__bd">帮助中心</view>
-      <view class="zan-cell__ft"></view>
-    </view>
-  </view>
-  <view class="zan-panel">
-    <view class="zan-cell zan-cell--access">
-      <view class="zan-cell__bd">退出</view>
-      <view class="zan-cell__ft"></view>
-    </view>
-  </view>
+        <view class="zan-panel">
+                <view class="zan-cell zan-cell--access">
+                        <view class="zan-cell__bd">联系客服</view>
+                        <view class="zan-cell__ft"></view>
+                </view>
+
+        </view>
+        <view class="zan-panel">
+                <view class="zan-cell zan-cell--access" bindtap="pageSkip" data-url='/pages/help/help'>
+                        <view class="zan-cell__bd">帮助中心</view>
+                        <view class="zan-cell__ft"></view>
+                </view>
+        </view>
+        <view class="zan-panel">
+                <view class="zan-cell zan-cell--access">
+                        <view class="zan-cell__bd">退出</view>
+                        <view class="zan-cell__ft"></view>
+                </view>
+        </view>
 </view>

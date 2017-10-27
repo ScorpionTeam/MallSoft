@@ -1,5 +1,6 @@
 // pages/good/good.js
-Page({
+let quantity = require("../../component/zanui-weapp/dist/quantity/index.js")
+Page(Object.assign({},quantity,{
 
   /**
    * 页面的初始数据
@@ -7,7 +8,24 @@ Page({
   data: {
       goodInfo:{},
       url:'http://mall.test.com:8088/mall/good/goodInfo?goodId=',
-      showDialog:false//dialog开关
+      showDialog:false,//dialog开关
+      quantity:1,//件数
+  },
+  /**
+   *跳转付款页面 
+   */
+  skipToPay(){
+    wx.navigateTo({
+      url: '/pages/pay/pay?id=1',
+    })
+  },
+  /**
+   * 购物数量事件
+   */
+  handleZanQuantityChange(e){
+    this.setData({
+      quantity:e.quantity
+    })
   },
   /**
    * 打开dialog
@@ -92,4 +110,4 @@ Page({
   onShareAppMessage: function () {
   
   }
-})
+}))

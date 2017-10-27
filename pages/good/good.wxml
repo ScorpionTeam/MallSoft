@@ -1,4 +1,5 @@
 <!--good商品详情页-->
+<import src='../../component/zanui-weapp/dist/quantity/index.wxml' />
 <view class="good_container">
   <view class='good_north '>
     <view class='good_scroll border_north'>
@@ -6,7 +7,7 @@
     </view>
     <view class='good_price border_north'>
       【品牌直采】【维持泌尿健康】Swisse 高浓度蔓越莓30粒/瓶 2瓶
-      <view class='single_price'>¥ 1100</view>
+      <view class='single_price'><span style="text-decoration:line-through;margin-right:20rpx;">¥ 1100</span>¥ 800</view>
     </view>
     <view class='good_selled'>
       <span class='sell_item'>运费:免运费 </span>
@@ -32,13 +33,32 @@
         <view class='confirm_good_info'>
           <image class='confirm_pic' src="https://haitao.nos.netease.com/f9ddc412985540479e8d1a58e683ef0215083243862041.jpg?imageView&quality=98&crop=0_0_750_500&imageView&thumbnail=710x0&quality=85"></image>
           <view class='confirm_good_introduce'>
-           <view>【品牌直采】【维持泌尿健康】Swisse 高浓度蔓越莓30粒/瓶 2瓶</view>
-           <view class='confirm_single_price'>¥ 1100</view>
+            <view>【品牌直采】【维持泌尿健康】Swisse 高浓度蔓越莓30粒/瓶 2瓶</view>
+            <view class='confirm_single_price'> ¥ 800</view>
           </view>
         </view>
-        <view class='confirm_good_count'></view>
+        <!--类目  -->
+        <view class='good_category'>
+          <view class='category_list'>
+            <view class='item_tit'>尺寸:</view>
+            <view class='item_list'>
+              <button class="zan-btn zan-btn--mini zan-btn--danger item_btn">70cm</button>
+              <button class="zan-btn zan-btn--mini zan-btn--danger item_btn">70cm</button>
+            </view>
+          </view>
+        </view>
+        <view class='confirm_good_count'>
+          <view class='count_lf'>
+            <p>购买数量:</p>
+            <p>剩余1723件</p>
+          </view>
+          <view class='count_rg'>
+            <template is='zan-quantity' data="{{min:1,max:10,quantity:quantity,componentId:'quantity'}}">
+            </template>
+          </view>
+        </view>
       </view>
-      <button class='zan-btn zan-btn--large zan-btn--danger' style='height:100rpx;'>下一步</button>
+      <button class='zan-btn zan-btn--large zan-btn--danger' style='height:100rpx;' bindtap='skipToPay'>下一步</button>
     </view>
   </view>
 </view>

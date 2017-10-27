@@ -1,0 +1,15 @@
+<view class='pay_content'>
+  <view class='zan-panel delivery_pay'>
+    <view class='person'>收货人:鲜牛奶冰  <view class='phone'>1586123213</view></view>
+    <view class=''> </view>
+  </view>
+  <view class='zan-panel good_pay'>
+    <view style="padding: 15px;">内容</view>
+  </view>
+  <view class='zan-panel message_pay'>
+    <view style="padding: 15px;">内容</view>
+  </view>
+  <view class='zan-panel price_info_pay'>
+    <view style="padding: 15px;">内容</view>
+  </view>
+</view>

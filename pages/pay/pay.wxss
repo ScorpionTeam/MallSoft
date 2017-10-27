@@ -1,0 +1,11 @@
+/*收获地址  */
+.delivery_pay{
+  height:110rpx;
+  padding: 28rpx;
+}
+.delivery_pay .person{
+  font-size: 28px;
+}
+.delivery_pay .phone{
+  float:right;
+}

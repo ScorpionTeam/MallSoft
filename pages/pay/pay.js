@@ -5,9 +5,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    isMessage:true
   },
+  /**
+   * 是否发送短信
+   */
+  isSendMessage(){
 
+  },
   /**
    * 生命周期函数--监听页面加载
    */

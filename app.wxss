@@ -13,3 +13,7 @@
 page{
   background: #f9f9f9;
 }
+
+.absolute{
+  position:absolute;
+}

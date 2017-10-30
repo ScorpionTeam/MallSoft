@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <import src="../../component/zanui-weapp/dist/noticebar/index.wxml" />
-<import src="../../common/template/images/hongbao/hongbao.wxml"/> 
+<import src="../../common/template/hongbao/hongbao.wxml"/> 
 <template is="hongbaoFix" data="{{openFlag:'test'}}"></template>
 <view class="container">
 <view class="zan-panel" style="width:100%;">

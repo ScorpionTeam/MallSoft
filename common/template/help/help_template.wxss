@@ -1,0 +1,48 @@
+.content_detail_e_1 {
+        margin-top: 10rpx;
+        font-size: 28rpx;
+}
+
+.content_detail_e_2 {
+        margin-top: 40rpx;
+        font-size: 24rpx;
+}
+
+.help_img_big {
+        text-align: center;
+        margin-top: 60rpx;
+        width: 100%;
+        height: 1000rpx;
+}
+
+.container_detail {
+        padding: 20rpx;
+        background-color: white;
+}
+
+.help_content_a {
+        background: #fff;
+        text-align: center;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        position: fixed;
+        bottom: 0;
+        height: 120rpx;
+}
+
+.help_a_image_tel {
+        margin-top: 40rpx;
+        width: 40rpx;
+        height: 40rpx;
+}
+
+.a_tel_sp {
+        margin-left: 20rpx;
+        color: #f30;
+        font-size: 22rpx;
+}
+
+.content_text_a {
+        font-size: 28rpx;
+}

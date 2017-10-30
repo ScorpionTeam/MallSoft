@@ -1,15 +1,121 @@
 <view class='pay_content'>
-  <view class='zan-panel delivery_pay'>
-    <view class='person'>收货人:鲜牛奶冰  <view class='phone'>1586123213</view></view>
-    <view class=''> </view>
+  <view class='zan-panel delivery_pay '>
+    <view class='add_delivery_pay zan-cell--access' hidden="{{deliveryFlag}}" bindtap='skipToPage' data-url='/pages/delivery/deliveryDetail/deliveryDetail?flag=1'>
+      <view class='zan-cell__body'>
+        <image class='add_pay_img' src='../../images/add_pay.png'></image>
+        <span class='add_tit'>新增收获地址</span>
+      </view>
+      <view class='zan-cell__ft'></view>
+    </view>
+    <view class='info_delivery_pay zan-cell--access' hidden="{{!deliveryFlag}}" bindtap='skipToPage' data-url='/pages/delivery/deliveryDetail/deliveryDetail?flag=0'>
+      <image class='location_img' src='../../images/location.png'></image>
+      <view class='person'>收货人: 鲜牛奶冰
+        <view class='phone'>1586123213</view>
+      </view>
+      <view class='address_pay'>
+        收获地址: 澳门特别行政区阿萨德爱上阿萨德爱谁谁多ad阿萨德撒的爱上ad的ad阿萨德爱上打算
+      </view>
+      <view class='zan-cell__ft'></view>
+    </view>
   </view>
   <view class='zan-panel good_pay'>
-    <view style="padding: 15px;">内容</view>
+    <view class='good_source'>
+      <view class='zan-icon zan-icon-store good_source_icon'></view>
+      <span>我爱全球通</span>
+    </view>
+    <view class="zan-card">
+      <view class="zan-card__thumb">
+        <image class="zan-card__img" src="https://img.yzcdn.cn/upload_files/2016/11/25/FpqPXlrMRjKwJs8VdTu3ZDJCj4j5.jpeg?imageView2/2/w/200/h/200/q/90/format/jpeg" mode="aspectFit"></image>
+      </view>
+      <view class="zan-card__detail">
+        <view class="zan-card__detail-row">
+          <view class="zan-card__right-col">¥ 999.99</view>
+          <view class="zan-card__left-col zan-ellipsis--l2">
+            红烧牛肉【虚拟商品】【有库存】【有sku】
+          </view>
+        </view>
+        <view class="zan-card__detail-row zan-c-gray-darker">
+          <view class="zan-card__right-col">x2</view>
+          <view class="zan-card__left-col">
+            3000克 50%
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='zan-cell'>
+      <view class='zan-cell__bd'>配送方式</view>
+      <view class='zan-cell__ft'>
+        <view style='margin-bottom:10rpx;'>免运费</view>
+        <view style='font-size:24rpx'>快递发货</view>
+      </view>
+    </view>
+    <view class='zan-cell'>
+      <view class='zan-cell__bd'>买家留言：
+        <input class='word_pay' placeholder='点击给商家留言' value='{{customerOpt.word}}' bindblur='getData' data-name='word' />
+      </view>
+    </view>
+    <view class='zan-cell'>
+      <view class='zan-cell__bd'>合计</view>
+      <view class='zan-cell__ft price_color'>¥139.00</view>
+    </view>
+  </view>
+  <view class='zan-panel token_pay'>
+    <view class='zan-cell zan-cell--access' bindtap='toggleDialog'>
+      <view class='zan-cell__bd'>优惠</view>
+      <view class='zan-cell__ft' style='font-size:26rpx;'>使用优惠</view>
+    </view>
   </view>
   <view class='zan-panel message_pay'>
-    <view style="padding: 15px;">内容</view>
+    <view class='zan-cell'>
+      <view class='zan-cell__bd'>短信通知收件人</view>
+      <view class='zan-cell__ft'>
+        <switch checked='{{customerOpt.isMessage}}' bindchange='isSendMessage' />
+      </view>
+    </view>
   </view>
   <view class='zan-panel price_info_pay'>
-    <view style="padding: 15px;">内容</view>
+    <view class='zan-cell cost_info'>
+      <view class='zan-cell__bd'>商品金额</view>
+      <view class='zan-cell__ft'>
+        ¥ 139.00
+      </view>
+    </view>
+    <view class='zan-cell cost_info'>
+      <view class='zan-cell__bd'>优惠券</view>
+      <view class='zan-cell__ft'>
+        - ¥ 139.00
+      </view>
+    </view>
+    <view class='zan-cell'>
+      <view class='zan-cell__bd'>运费</view>
+      <view class='zan-cell__ft'>
+        ¥ 0.00
+      </view>
+    </view>
   </view>
+</view>
+<view class="zan-dialog {{ showTokenDialog ? 'zan-dialog--show' : '' }}">
+  <view class="zan-dialog__mask" bindtap="toggleDialog" />
+  <view class="zan-dialog__container">
+    <view class='toke_list_tit'>选择优惠</view>
+    <view class='token_list'>
+      <view class='not_find' hidden='true'>
+        暂无可用优惠券
+      </view>
+      <view class='token_item'>
+        <view class='token_content'></view>
+        <view class='token_footer'></view>
+      </view>
+      <view class='token_btn'>
+        <view>取消</view>
+        <view class='token_btn_lf'>确认</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='pay_footer'>
+  <view class='pay_footer_lf'>合计:
+    <span class='price_color'>¥ 139.00</span>
+  </view>
+  <button class='zan-btn zan-btn--danger pay_footer_rg'>提交订单</button>
 </view>

@@ -1,11 +1,182 @@
+.pay_content{
+padding-bottom: 120rpx;
+}
+.price_color{
+  color:red;
+}
 /*收获地址  */
-.delivery_pay{
-  height:110rpx;
+.delivery_pay {
   padding: 28rpx;
+  position: relative;
 }
-.delivery_pay .person{
-  font-size: 28px;
+
+.delivery_pay .zan-cell__ft {
+  position: static;
 }
-.delivery_pay .phone{
-  float:right;
+
+/*新增收货人  */
+
+.add_delivery_pay {
+  position: relative;
+}
+
+.add_pay_img {
+  width: 80rpx;
+  height: 80rpx;
+  object-fit: cover;
+  vertical-align: middle;
+  margin-right: 20rpx;
+}
+
+.add_tit {
+  font-size: 30rpx;
+}
+
+/*收货人信息 */
+
+.info_delivery_pay {
+  position: relative;
+}
+
+.delivery_pay .person {
+  font-size: 28rpx;
+  width: 600rpx;
+  margin: 0 auto;
+}
+
+.delivery_pay .phone {
+  float: right;
+}
+
+.address_pay {
+  width: 600rpx;
+  margin: 0 auto;
+  margin-top: 10rpx;
+  font-size: 26rpx;
+  color: #c1c1c1;
+}
+
+.location_img {
+  width: 30rpx;
+  height: 30rpx;
+  object-fit: cover;
+  position: absolute;
+  top: 5rpx;
+  left: 9rpx;
+}
+
+/*商品 */
+
+.good_pay {
+  padding-top: 15px; 
+}
+.good_source{
+  font-size: 28rpx;
+  padding:15px;
+  padding-top:0;
+}
+.good_source_icon{
+  display:inline-block;
+font-size:40rpx;
+margin-right: 14rpx;
+}
+.good_pay .zan-card {
+  background: #f9f9f9;
+}
+.good_pay .zan-cell{
+  align-items: flex-start;
+}
+.word_pay{
+  width: 530rpx;
+  vertical-align: middle;
+  display: inline-block;
+}
+/*商品金额  */
+.cost_info{
+  padding-bottom: 0;
+}
+.cost_info::after{
+  display: none;
+}
+/* 底部 */
+.pay_footer{
+  height: 100rpx;
+  width: 100%;
+  position:fixed;
+  bottom:0;
+  background: #fff;
+  font-size: 0;
+  border-top: 1px solid #c1c1c1;
+}
+.pay_footer_lf{
+  width:470rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: right;
+  display: inline-block;
+  font-size: 38rpx;
+  vertical-align:middle;
+  padding-right:30rpx;
+}
+.pay_footer_rg{
+  width: 250rpx;
+  height: 100rpx;
+  display:inline-block;
+}
+
+/*优惠券Dialog*/
+.toke_list_tit{
+  text-align: center;
+  font-size: 30rpx;
+  padding:18rpx 0;
+}
+.token_list{
+  border-top:1px solid #f9f9f9;
+}
+.token_list .not_find{
+  height:200rpx;
+  font-size:26rpx;
+  color:#c1c1c1;
+  text-align: center;
+}
+.token_item{
+  padding: 20rpx 0;
+  width: 500rpx;
+  margin: 0 auto;
+  
+}
+.token_content{
+  width: 100%;
+  height: 165rpx;
+  border: 1px solid red;
+  border-bottom:0; 
+  border-top-left-radius:10rpx;
+  border-top-right-radius:10rpx;
+}
+.token_footer{
+  width: 100%;
+  height: 55rpx;
+  background: red;
+  border: 1px solid red;
+  border-top:0;
+  border-bottom-left-radius:10rpx;
+  border-bottom-right-radius: 10rpx;
+}
+.token_btn{
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 0;
+  border-top:1px solid #c1c1c1;
+}
+.token_btn view{
+  width: 50%;
+  height: 100rpx;
+  display: inline-block;
+  font-size: 28rpx;
+  text-align: center;
+}
+.token_btn_lf{
+  color:#fff;
+  background: red;
 }

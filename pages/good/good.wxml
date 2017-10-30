@@ -2,12 +2,18 @@
 <import src='../../component/zanui-weapp/dist/quantity/index.wxml' />
 <view class="good_container">
   <view class='good_north '>
-    <view class='good_scroll border_north'>
-      <image src="https://haitao.nos.netease.com/f9ddc412985540479e8d1a58e683ef0215083243862041.jpg?imageView&quality=98&crop=0_0_750_500&imageView&thumbnail=710x0&quality=85"></image>
-    </view>
+    <swiper indicator-dots='true' autoplay='true' class='good_scroll border_north'>
+      <swiper-item>
+        <image src="https://haitao.nos.netease.com/f9ddc412985540479e8d1a58e683ef0215083243862041.jpg?imageView&quality=98&crop=0_0_750_500&imageView&thumbnail=710x0&quality=85"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src="https://haitao.nos.netease.com/f9ddc412985540479e8d1a58e683ef0215083243862041.jpg?imageView&quality=98&crop=0_0_750_500&imageView&thumbnail=710x0&quality=85"></image>
+      </swiper-item>
+    </swiper>
     <view class='good_price border_north'>
       【品牌直采】【维持泌尿健康】Swisse 高浓度蔓越莓30粒/瓶 2瓶
-      <view class='single_price'><span style="text-decoration:line-through;margin-right:20rpx;">¥ 1100</span>¥ 800</view>
+      <view class='single_price'>
+        <span style="text-decoration:line-through;margin-right:20rpx;">¥ 1100</span>¥ 800</view>
     </view>
     <view class='good_selled'>
       <span class='sell_item'>运费:免运费 </span>
@@ -42,8 +48,8 @@
           <view class='category_list'>
             <view class='item_tit'>尺寸:</view>
             <view class='item_list'>
-              <button class="zan-btn zan-btn--mini zan-btn--danger item_btn">70cm</button>
-              <button class="zan-btn zan-btn--mini zan-btn--danger item_btn">70cm</button>
+              <button class="zan-btn zan-btn--mini">50cm</button>
+              <button class="zan-btn zan-btn--mini">70cm</button>
             </view>
           </view>
         </view>
@@ -66,7 +72,7 @@
   <view class='back'>
     <navigator url="/pages/index/index" open-type="reLaunch" hover-class="navigator-hover">
       <view class="icon-wrap" style='height:100rpx;'>
-        <view class="zan-icon zan-icon-home" style="font-size: 40rpx; color: #ff4343;margin:8rpx;"></view>
+        <view class="zan-icon zan-icon-home" style="font-size: 40rpx; color: #ff4343;margin-top:8rpx;"></view>
         <view class="icon-classname" style="font-size:24rpx;color: #ff4343;">首页</view>
       </view>
     </navigator>

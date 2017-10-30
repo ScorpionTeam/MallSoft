@@ -1,18 +1,20 @@
-// pages/help/help.js
 Page({
 
         /**
          * 页面的初始数据
          */
         data: {
-               
+                currentIndex: "0"
         },
 
         /**
          * 生命周期函数--监听页面加载
          */
         onLoad: function (options) {
-
+                this.setData({
+                        currentIndex: options.index
+                })
+                console.log(options.index);
         },
 
         /**
@@ -63,19 +65,9 @@ Page({
         onShareAppMessage: function () {
 
         },
-
         /**
-         * 显示不同模板
-         */
-        showHelpDetail: function (index) {
-                console.log("currentIndex" + index.currentTarget.dataset.hi);
-                wx.navigateTo({
-                        url: "/pages/help/help_detail/help_detail?index=" + index.currentTarget.dataset.hi
-                })
-        },
-        /**
-         * 帮助客服电话
-         */
+        * 帮助客服电话
+        */
         startHelpCall: function (event) {
                 console.log(event.currentTarget.dataset.phone);
                 wx.makePhoneCall({
@@ -88,5 +80,4 @@ Page({
                         }
                 })
         }
-
 })

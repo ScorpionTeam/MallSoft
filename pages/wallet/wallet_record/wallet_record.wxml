@@ -1,8 +1,12 @@
 <!--pages/wallet/wallet_record/wallet_record.wxml-->
 <view class="container_wr">
-        <scroll-view scroll-y class="wr_list" wx:for="{{wrList}}" wx:for-item="item">
+        <scroll-view
+         scroll-y="true" 
+        class="wr_list"
+         wx:for="{{wrList}}" 
+        wx:for-item="item">
                 <view class="wr_item">
-                        <image class="wr_item_img" src='/images/icon_detault_wallet.png'></image>
+                        <image class="wr_item_img" mode='aspectFit'                     src='/images/icon_detault_wallet.png'></image>
                         <view class="wr_address_date">
                                 <view class="wr_address">{{item.wrAddress}}</view>
                                 <view class="wr_date">{{item.wrDate}}</view>

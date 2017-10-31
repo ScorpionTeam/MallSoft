@@ -1,14 +1,14 @@
 <template name="template_help_detail_a">
         <view class="container_detail">
-                <view class="content_text_a">如何申请退款维权？</view>
+                <view class="content_detail_e_1">如何申请退款维权？</view>
                 <view class="content_detail_e_2">如何申请退款？</view>
                 <view class="content_detail_e_2">1.您好，建议您可以先通过购买的商品详情页面，查看商家是否说明发货时间，入围说明，您可在订单详情页面直接拨打商家电话，进行咨询。</view>
-                <image class="help_img_big" src="../../../images/image_help_show.png"></image>
-                <image class="help_img_big" src="../../../images/image_help_show.png"></image>
+                <image class="help_img_big" mode='aspectFit' src="../../../images/image_help_show.png"></image>
+                <image class="help_img_big" mode='aspectFit' src="../../../images/image_help_show.png"></image>
                 <view class="content_detail_e_2">2.如联系不上商家为了不耽误您的购买，建议您申请退款维权。同时您可拨打我们的官方客服电话：0571-88999922(08:30-17:00)。</view>
-                <image class="help_img_big" src="../../../images/image_help_show.png"></image>
+                <image class="help_img_big" mode='aspectFit' src="../../../images/image_help_show.png"></image>
                 <view class="content_detail_e_2">3.如联系不上商家为了不耽误您的购买，建议您申请退款维权。同时您可拨打我们的官方客服电话：0571-88999922(08:30-17:00)。</view>
-                <image class="help_img_big" src="../../../images/image_help_show.png"></image>
+                <image class="help_img_big" mode='aspectFit' src="../../../images/image_help_show.png"></image>
         </view>
         <view class="help_content_a" data-phone="0571-88999922" bindtap="startHelpCall">
                 <image class="help_a_image_tel" src="../../../images/tel-phone.png"></image>

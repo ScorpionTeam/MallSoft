@@ -25,20 +25,24 @@
         margin-right: auto;
         position: fixed;
         bottom: 0;
+        line-height: 120rpx;
+        vertical-align: middle;
         height: 120rpx;
 }
 
 .help_image_tel {
-        margin-top: 40rpx;
+        line-height: 120rpx;
+        vertical-align: middle;
         width: 40rpx;
         height: 40rpx;
 }
 
 .tel_sp {
-        margin-top:20rpx;
-        margin-left: 20rpx;
+        line-height: 120rpx;
+        vertical-align: middle;
+        margin-left: 10rpx;
         color: #f30;
-        font-size: 22rpx;
+        font-size: 24rpx;
 }
 
 /* 帮助中心首页样式--end */

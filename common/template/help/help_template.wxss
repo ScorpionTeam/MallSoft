@@ -1,11 +1,12 @@
 .content_detail_e_1 {
+        width: 100%;
         margin-top: 10rpx;
-        font-size: 28rpx;
+        font-size: 30rpx;
 }
 
 .content_detail_e_2 {
         margin-top: 40rpx;
-        font-size: 24rpx;
+        font-size: 26rpx;
 }
 
 .help_img_big {
@@ -28,21 +29,23 @@
         margin-right: auto;
         position: fixed;
         bottom: 0;
+        line-height: 120rpx;
         height: 120rpx;
+        vertical-align: middle;
 }
 
 .help_a_image_tel {
-        margin-top: 40rpx;
         width: 40rpx;
         height: 40rpx;
+        line-height: 120rpx;
+        vertical-align: middle;
 }
 
 .a_tel_sp {
-        margin-left: 20rpx;
+        display: inline-block;
+        margin-left: 10rpx;
         color: #f30;
-        font-size: 22rpx;
-}
-
-.content_text_a {
-        font-size: 28rpx;
+        font-size: 24rpx;
+        line-height: 120rpx;
+        vertical-align: middle;
 }

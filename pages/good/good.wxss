@@ -14,7 +14,7 @@
 
 .good_scroll {
   text-align: center;
-  height: 480rpx;
+  height: 500rpx;
 }
 
 .good_price {

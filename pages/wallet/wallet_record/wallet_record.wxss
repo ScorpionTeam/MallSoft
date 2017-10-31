@@ -1,0 +1,56 @@
+/* pages/wallet/wallet_record/wallet_record.wxss */
+
+.container_wr {
+        width: 100%;
+        padding: 20rpx;
+        background-color: white;
+}
+
+.wr_list {
+        width: 100%;
+}
+
+.wr_item {
+        width: 100%;
+        line-height: 120rpx;
+        border: 6rpx solid white;
+        height: 120rpx;
+        background-color: #f66;
+}
+
+.wr_item_img {
+        margin-left: 40rpx;
+        vertical-align: middle;
+        width: 60rpx;
+        height: 60rpx;
+        border-radius: 20rpx;
+}
+
+.wr_price {
+        margin-right: 40rpx;
+        font-size: 24rpx;
+        float: right;
+        vertical-align: middle;
+}
+
+.wr_address_date {
+        display: inline-block;
+        line-height: 100rpx;
+        margin-left: 20rpx;
+}
+
+.wr_address {
+        width: 80%;
+        display: inline-block;
+        font-size: 24rpx;
+        line-height: 50rpx;
+        vertical-align: top;
+}
+
+.wr_date {
+        display: inline-block;
+        vertical-align: bottom;
+        font-size: 24rpx;
+        line-height: 50rpx;
+        margin-left: -80%;
+}

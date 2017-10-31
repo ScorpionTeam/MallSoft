@@ -73,6 +73,7 @@ padding-bottom: 120rpx;
 .good_source{
   font-size: 28rpx;
   padding:15px;
+  padding-top:0;
 }
 .good_source_icon{
   display:inline-block;
@@ -86,7 +87,8 @@ margin-right: 14rpx;
   align-items: flex-start;
 }
 .word_pay{
-  width: 600rpx;
+  width: 530rpx;
+  vertical-align: middle;
   display: inline-block;
 }
 /*商品金额  */
@@ -120,4 +122,61 @@ margin-right: 14rpx;
   width: 250rpx;
   height: 100rpx;
   display:inline-block;
+}
+
+/*优惠券Dialog*/
+.toke_list_tit{
+  text-align: center;
+  font-size: 30rpx;
+  padding:18rpx 0;
+}
+.token_list{
+  border-top:1px solid #f9f9f9;
+}
+.token_list .not_find{
+  height:200rpx;
+  font-size:26rpx;
+  color:#c1c1c1;
+  text-align: center;
+}
+.token_item{
+  padding: 20rpx 0;
+  width: 500rpx;
+  margin: 0 auto;
+  
+}
+.token_content{
+  width: 100%;
+  height: 165rpx;
+  border: 1px solid red;
+  border-bottom:0; 
+  border-top-left-radius:10rpx;
+  border-top-right-radius:10rpx;
+}
+.token_footer{
+  width: 100%;
+  height: 55rpx;
+  background: red;
+  border: 1px solid red;
+  border-top:0;
+  border-bottom-left-radius:10rpx;
+  border-bottom-right-radius: 10rpx;
+}
+.token_btn{
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 0;
+  border-top:1px solid #c1c1c1;
+}
+.token_btn view{
+  width: 50%;
+  height: 100rpx;
+  display: inline-block;
+  font-size: 28rpx;
+  text-align: center;
+}
+.token_btn_lf{
+  color:#fff;
+  background: red;
 }

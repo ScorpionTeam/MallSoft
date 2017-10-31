@@ -1,1 +1,4 @@
-/* pages/order/order.wxss */
+.order_tab{
+  border-top:1px solid #f9f3f3;
+  
+}

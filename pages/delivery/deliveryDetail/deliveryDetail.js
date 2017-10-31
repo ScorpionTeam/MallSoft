@@ -55,7 +55,8 @@ Page({
         console.log(res);
         this.setData({
           deliveryId: res.data.data.id
-        })
+        });
+        wx.navigateBack({delta:1});
       },
       fail: function (err) {
         console.log(err);

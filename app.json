@@ -11,7 +11,9 @@
     "pages/delivery/deliveryDetail/deliveryDetail",
     "pages/login/login",
     "pages/pay/pay",
-    "pages/help/help"
+    "pages/help/help",
+    "pages/help/help_detail/help_detail",
+    "pages/wallet/wallet_record/wallet_record"
   ],
   "window": {
     "navigationBarBackgroundColor": "#fff",

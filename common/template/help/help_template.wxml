@@ -1,98 +1,68 @@
-<import src="../../component/zanui-weapp/dist/noticebar/index.wxml" />
-<template name="template_help_main">
-        <view class="help_cintainer">
-
-                <view class="hepl_content_a">
-                        <view>常见订单问题</view>
-                        <view class="hepl_tips_a">(若仍有疑问可点击下方链接联系优选客服的哦)</view>
-                </view>
-                <view class="hepl_content_b">
-                        <view class="zan-panel">
-                                <view class='zan-cell zan-cell--access'>
-                                        <view class="zan-cell__bd">1.如何申请退款维权？</view>
-                                        <view class="zan-cell__ft"></view>
-                                </view>
-                        </view>
-                        <view class="zan-panel">
-                                <view class='zan-cell zan-cell--access'>
-                                        <view class="zan-cell__bd">2.我已经付款了，商家怎么还没发货？</view>
-                                        <view class="zan-cell__ft"></view>
-                                </view>
-                        </view>
-                        <view class="zan-panel">
-                                <view class='zan-cell zan-cell--access'>
-                                        <view class="zan-cell__bd">3.订单信息填错了，怎么修改呢?</view>
-                                        <view class="zan-cell__ft"></view>
-                                </view>
-                        </view>
-                        <view class="zan-panel">
-                                <view class='zan-cell zan-cell--access'>
-                                        <view class="zan-cell__bd">4.订单已经显示退款了，钱怎么还没到账呢？</view>
-                                        <view class="zan-cell__ft"></view>
-                                </view>
-                        </view>
-                        <view class="zan-panel">
-                                <view class='zan-cell zan-cell--access'>
-                                        <view class="zan-cell__bd">5.找不到换货的地方，我该怎么办喔？</view>
-                                        <view class="zan-cell__ft"></view>
-                                </view>
-                        </view>
-                </view>
-
-                <view class="help_content_c">
-                        <image class='help_image_tel' src='images/tel-phone.png'></image>
-                        <view class="tel_sp">联系客服: 0571-88999922(08:30-17:00)</view>
-                </view>
-        </view>
-</template>
-
-
 <template name="template_help_detail_a">
-        <view class="container_detail_a">
-                <view class="content_detail_e_1">如何申请退款维权？</view>
+        <view class="container_detail">
+                <view class="content_text_a">如何申请退款维权？</view>
                 <view class="content_detail_e_2">如何申请退款？</view>
                 <view class="content_detail_e_2">1.您好，建议您可以先通过购买的商品详情页面，查看商家是否说明发货时间，入围说明，您可在订单详情页面直接拨打商家电话，进行咨询。</view>
-                <image src="images/image_help_show.png"></image>
-                <image src="images/image_help_show.png"></image>
+                <image class="help_img_big" src="../../../images/image_help_show.png"></image>
+                <image class="help_img_big" src="../../../images/image_help_show.png"></image>
                 <view class="content_detail_e_2">2.如联系不上商家为了不耽误您的购买，建议您申请退款维权。同时您可拨打我们的官方客服电话：0571-88999922(08:30-17:00)。</view>
-                <image src="images/image_help_show.png"></image>
+                <image class="help_img_big" src="../../../images/image_help_show.png"></image>
                 <view class="content_detail_e_2">3.如联系不上商家为了不耽误您的购买，建议您申请退款维权。同时您可拨打我们的官方客服电话：0571-88999922(08:30-17:00)。</view>
-                <image src="images/image_help_show.png"></image>
+                <image class="help_img_big" src="../../../images/image_help_show.png"></image>
+        </view>
+        <view class="help_content_a" data-phone="0571-88999922" bindtap="startHelpCall">
+                <image class="help_a_image_tel" src="../../../images/tel-phone.png"></image>
+                <span class="a_tel_sp">联系客服: 0571-88999922(08:30-17:00)</span>
         </view>
 </template>
 
 
 <template name="template_help_detail_b">
-        <view class="container_detail_b">
+        <view class="container_detail">
                 <view class="content_detail_e_1">我已经付款了，商家怎么还没发货？</view>
                 <view class="content_detail_e_2">您好，建议您可以先通过购买的商品详情页面，查看商家是否说明发货时间，入围说明，您可在订单详情页面直接拨打商家电话，进行咨询。</view>
                 <view class="content_detail_e_2">如联系不上商家为了不耽误您的购买，建议您申请退款维权。同时您可拨打我们的官方客服电话：0571-88999922(08:30-17:00)。</view>
         </view>
+        <view class="help_content_a" data-phone="0571-88999922" bindtap="startHelpCall">
+                <image class="help_a_image_tel" src="../../../images/tel-phone.png"></image>
+                <span class="a_tel_sp">联系客服: 0571-88999922(08:30-17:00)</span>
+        </view>
 </template>
 
 
-
 <template name="template_help_detail_c">
-        <view class="container_detail_c">
+        <view class="container_detail">
                 <view class="content_detail_e_1">订单信息填错了，怎么修改呢?</view>
                 <view class="content_detail_e_2">您好，下单后卖家无法修改订单信息，您可在订单详情页面直接拨打商家电话，联系修改订单。如联系不上商家，建议您申请退款，退款成功之后重新下单。</view>
                 <view class="content_detail_e_2">如无法申请退款，您可拨打我们的官方客服电话：0571-88999922(08:30-17:00)。</view>
+        </view>
+        <view class="help_content_a" data-phone="0571-88999922" bindtap="startHelpCall">
+                <image class="help_a_image_tel" src="../../../images/tel-phone.png"></image>
+                <span class="a_tel_sp">联系客服: 0571-88999922(08:30-17:00)</span>
         </view>
 </template>
 
 
 <template name="template_help_detail_d">
-        <view class="container_detail_d">
+        <view class="container_detail">
                 <view class="content_detail_e_1">订单已经显示退款了，钱怎么还没到账呢？</view>
                 <view class="content_detail_e_2">您好，退款成功之后到账时间为3-15个工作日，退款金额Juin原路返回卖家的支付银行卡或者微信钱包。</view>
                 <view class="content_detail_e_2">如超出了正常的退款时间，麻烦您提供微信零钱包或者银行卡流水的截图凭证，反馈给我们，以便工作人员合适，给你退款。您可拨打我们的官方客服电话：0571-88999922(08:30-17:00)。</view>
         </view>
+        <view class="help_content_a" data-phone="0571-88999922" bindtap="startHelpCall">
+                <image class="help_a_image_tel" src="../../../images/tel-phone.png"></image>
+                <span class="a_tel_sp">联系客服: 0571-88999922(08:30-17:00)</span>
+        </view>
 </template>
 
 <template name="template_help_detail_e">
-        <view class="container_detail_e">
+        <view class="container_detail">
                 <view class="content_detail_e_1">找不到换货的地方，我该怎么办哦？</view>
                 <view class="content_detail_e_2">您好，可在订单详情页面直接拨打电话给商家，进行咨询。换货之后，请保存好相关物流凭证，并及时延长订单交易完成时间或先申请退款避免钱款打给商家。</view>
                 <view class="content_detail_e_2">如果无法退款，您可拨打我们的官方客服电话：0571-88999922(08:30-17:00)。</view>
+        </view>
+        <view class="help_content_a" data-phone="0571-88999922" bindtap="startHelpCall">
+                <image class="help_a_image_tel" src="../../../images/tel-phone.png"></image>
+                <span class="a_tel_sp">联系客服: 0571-88999922(08:30-17:00)</span>
         </view>
 </template>

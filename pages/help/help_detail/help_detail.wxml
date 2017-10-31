@@ -1,0 +1,7 @@
+<import src="/common/template/help/help_template.wxml" />
+
+<template wx:if="{{currentIndex==='0' }}" is="template_help_detail_a"></template>
+<template wx:elif="{{currentIndex==='1' }}" is="template_help_detail_b"></template>
+<template wx:elif="{{currentIndex==='2' }}" is="template_help_detail_c"></template>
+<template wx:elif="{{currentIndex==='3' }}" is="template_help_detail_d"></template>
+<template wx:elif="{{currentIndex==='4' }}" is="template_help_detail_e"></template>

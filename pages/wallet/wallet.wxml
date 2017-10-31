@@ -1,22 +1,29 @@
 <import src="../../component/zanui-weapp/dist/noticebar/index.wxml" />
 <view class="container">
-  <view class="zan-panel" style="width:100%;">
-    <template
-      is="zan-noticebar"
-      data="{{ ...movable, componentId: 'movable'  }}"
-    ></template>
-  </view>
-  <view style="width:100%;color:#fff;">
-    <view>余额账户(元)</view>
-  </view>
-<view class="zan-panel" style="width:100%">
-    <view class="zan-cell zan-cell--access" bindtap='pageSkip' data-url='/pages/ticket/ticket'>
-      <view class="zan-cell__bd">充值</view>
-      <view class="zan-cell__ft"></view>
-    </view>
-    <view class="zan-cell zan-cell--access" bindtap='pageSkip' data-url='/pages/ticket/ticket'>
-      <view class="zan-cell__bd">提现</view>
-      <view class="zan-cell__ft"></view>
-    </view>
-  </view>
+        <view class="zan-panel" style="width:100%;">
+                <template is="zan-noticebar" 
+                data="{{ ...movable, componentId: 'movable'  }}">
+                </template>
+        </view>
+        <view class="content_a_wallet">
+                <view class="text_lab_surplus">余额账户(元)</view>
+                <view class="text_lab_detail" 
+                 bindtap='pageSkip'
+                 data-url='/pages/wallet/wallet_record/wallet_record'>明细</view>
+                <view class="text_surplus">888.00</view>
+        </view>
+        <view class="zan-panel" style="width:100%">
+                <view class="zan-cell zan-cell--access"
+                 bindtap='pageSkip' 
+                data-url='/pages/ticket/ticket'>
+                        <view class="zan-cell__bd">充值</view>
+                        <view class="zan-cell__ft"></view>
+                </view>
+                <view class="zan-cell zan-cell--access" 
+                bindtap='pageSkip' 
+                data-url='/pages/ticket/ticket'>
+                        <view class="zan-cell__bd">提现</view>
+                        <view class="zan-cell__ft"></view>
+                </view>
+        </view>
 </view>

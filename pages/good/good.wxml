@@ -2,7 +2,7 @@
 <import src='../../component/zanui-weapp/dist/quantity/index.wxml' />
 <view class="good_container">
   <view class='good_north '>
-    <swiper indicator-dots='true' autoplay='true' class='good_scroll border_north'>
+    <swiper class='good_scroll border_north' indicator-dots='true' autoplay='true' circular='true'>
       <swiper-item>
         <image src="https://haitao.nos.netease.com/f9ddc412985540479e8d1a58e683ef0215083243862041.jpg?imageView&quality=98&crop=0_0_750_500&imageView&thumbnail=710x0&quality=85"></image>
       </swiper-item>

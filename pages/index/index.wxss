@@ -2,6 +2,7 @@
 
 .container {
   font: 12px/1.5 tahoma, arial, 'Hiragino Sans GB', '\5b8b\4f53', sans-serif;
+  background: none;
 }
 
 .userinfo {
@@ -23,4 +24,42 @@
 
 .usermotto {
   margin-top: 200px;
+}
+
+/*首页活动部分 */
+.activity_index{
+  text-align: center;
+  margin-bottom: 20rpx;
+  height: 380rpx;
+  padding-bottom:20rpx; 
+  background: #fff;
+}
+.activity_img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/*优选列表*/
+.pick_list{
+  background: #fff;
+  padding: 20rpx 0;
+  position: relative;
+}
+.pick_tit{
+  text-align: center;
+  font-size:36rpx;
+  margin-bottom: 30rpx;
+}
+.pick_item{
+  width: 100%; 
+  padding-bottom: 30rpx;
+}
+.loading_pick{
+  padding: 24rpx 0;
+  text-align: center;
+  color:#aaa;
+}
+.zan-loadmore{
+  margin: 0 auto;
 }

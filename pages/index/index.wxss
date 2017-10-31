@@ -30,7 +30,7 @@
 .activity_index{
   text-align: center;
   margin-bottom: 20rpx;
-  height: 380rpx;
+  height: 350rpx;
   padding-bottom:20rpx; 
   background: #fff;
 }

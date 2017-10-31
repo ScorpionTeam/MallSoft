@@ -16,6 +16,21 @@
         <image class='activity_img' src="https://haitao.nos.netease.com/f9ddc412985540479e8d1a58e683ef0215083243862041.jpg?imageView&quality=98&crop=0_0_750_500&imageView&thumbnail=710x0&quality=85"></image>
       </swiper-item>
     </swiper>
+    <!--分类入口-->
+    <view class='category_index'>
+        <view class='category_item'>
+          <image class='category_img' src='../../images/pintuan.png'></image>
+          <view>拼团</view>
+        </view>
+        <view class='category_item'>
+        <image class='category_img' src='../../images/qiang.png'></image>
+        <view>秒杀</view>
+        </view>
+        <view class='category_item'>
+        <image class='category_img' src='../../images/moreIndex.png'></image>
+        <view>分类</view>
+        </view>
+    </view>
     <!-- <view class='pick_list'>
       <view wx:for="{{goodList}}" wx:key="unique" class='pick_item'>
         <view style="padding:0 30rpx;" bindtap="goodInfo">

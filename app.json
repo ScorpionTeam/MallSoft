@@ -20,7 +20,8 @@
     "navigationBarTitleText": "商城优选",
     "navigationBarTextStyle": "black",
     "backgroundTextStyle": "dark",
-    "backgroundColor": "#f9f9f9"
+    "backgroundColor": "#f9f9f9",
+    "enablePullDownRefresh": "true"
   },
   "tabBar": {
     "color": "#8a8a8a",

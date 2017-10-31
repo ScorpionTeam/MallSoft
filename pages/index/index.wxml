@@ -1,90 +1,98 @@
 <!--index.wxml-->
 <import src="../../component/zanui-weapp/dist/noticebar/index.wxml" />
-<import src="../../common/template/hongbao/hongbao.wxml"/> 
-<template is="hongbaoFix" data="{{openFlag:'test'}}"></template>
+<import src="../../common/template/hongbao/hongbao.wxml" />
+<import src='../../component/zanui-weapp/dist/loadmore/index.wxml' />
+<template is="hongbaoFix" data="{{openFlag:'openFlag',animationData:animationData}}"></template>
 <view class="container">
-<view class="zan-panel" style="width:100%;">
-    <template
-      is="zan-noticebar"
-      data="{{ ...movable, componentId: 'movable'  }}"
-    ></template>
+  <view class="zan-panel" style="width:100%;margin:0;">
+    <template is="zan-noticebar" data="{{ ...movable, componentId: 'movable'  }}"></template>
   </view>
-  <scroll-view scroll-y="true" style="height:600px" upper-threshold="10" lower-threshold="1" bindscrolltolower='pullUp'>
-    <view wx:for="{{goodList}}" wx:key="unique" style="display: block;" style="width: 100%; height: 340px;">
-      <view style="padding:0 30rpx;" bindtap="goodInfo">
-        <navigator url="/pages/good/good?goodId={{item.id}}" hover-class="navigator-hover" style='height:220px'>
-          <image style="width: 100%; height: 220px; background-color: #eeeeee;" src="{{item.mainImgUrl}}"></image>
-        </navigator>
-      </view>
-      <view class="zan-cell">
-        <view class="zan-cell__bd">
-          <view class="zan-ellipsis" style="width: 300px;font-size:16px;font-weight:700;">
-            {{item.goodName}}
+  <scroll-view scroll-y="true" style='height:600px;' lower-threshold="5" bindscrolltolower='pullUp'>
+    <swiper class='activity_index' indicator-dots='true' autoplay='true' circular='true'>
+      <swiper-item class='activity_index'>
+        <image class='activity_img' src="https://haitao.nos.netease.com/f9ddc412985540479e8d1a58e683ef0215083243862041.jpg?imageView&quality=98&crop=0_0_750_500&imageView&thumbnail=710x0&quality=85"></image>
+      </swiper-item>
+      <swiper-item>
+        <image class='activity_img' src="https://haitao.nos.netease.com/f9ddc412985540479e8d1a58e683ef0215083243862041.jpg?imageView&quality=98&crop=0_0_750_500&imageView&thumbnail=710x0&quality=85"></image>
+      </swiper-item>
+    </swiper>
+    <!--分类入口-->
+    <view class='category_index'>
+        <view class='category_item'>
+          <image class='category_img' src='../../images/pintuan.png'></image>
+          <view>拼团</view>
+        </view>
+        <view class='category_item'>
+        <image class='category_img' src='../../images/qiang.png'></image>
+        <view>秒杀</view>
+        </view>
+        <view class='category_item'>
+        <image class='category_img' src='../../images/moreIndex.png'></image>
+        <view>分类</view>
+        </view>
+    </view>
+    <!-- <view class='pick_list'>
+      <view wx:for="{{goodList}}" wx:key="unique" class='pick_item'>
+        <view style="padding:0 30rpx;" bindtap="goodInfo">
+          <navigator url="/pages/good/good?goodId={{item.id}}" hover-class="navigator-hover" style='height:220px'>
+            <image style="width: 100%; height: 220px; background-color: #eeeeee;" src="{{item.mainImgUrl}}"></image>
+          </navigator>
+        </view>
+        <view class="zan-cell">
+          <view class="zan-cell__bd">
+            <view class="zan-ellipsis" style="width: 300px;font-size:16px;font-weight:700;">
+              {{item.goodName}}
+            </view>
           </view>
         </view>
+        <view style="margin-top:10px;padding:0 50rpx">
+          <view class="zan-c-gray" style="float:left;">来自: 小米科技有限公司</view>
+          <view class="zan-c-gray"> | {{item.saleVolume}} 人购买</view>
+        </view>
       </view>
-      <view style="margin-top:10px;padding:0 50rpx">
-        <view class="zan-c-gray" style="float:left;">来自: 小米科技有限公司</view>
-        <view class="zan-c-gray"> | {{item.saleVolume}} 人购买</view>
-      </view>
-    </view>
+    </view> -->
     <!--手机测试页面-->
-    <view style='width:100%;height:340px;display:block;'>
-      <view>
-        <navigator url="/pages/good/good?goodId={{item.id}}" hover-class="navigator-hover" style='height:220px'>
-          <image style="width: 100%; height: 220px; background-color: #eeeeee;" src="https://haitao.nos.netease.com/f9ddc412985540479e8d1a58e683ef0215083243862041.jpg?imageView&quality=98&crop=0_0_750_500&imageView&thumbnail=710x0&quality=85"></image>
-        </navigator>
-      </view>
-      <view class="zan-cell">
-        <view class="zan-cell__bd">
-          <view class="zan-ellipsis" style="width: 300px;font-size:16px;font-weight:700;">
-            【秀智同款】the SAEM 得鲜 爱可按钮唇膏 M系列 哑光系列 2克/支
+    <view class='pick_list'>
+      <view class='pick_tit'>精选宝贝</view>
+      <view class='pick_item'>
+        <view>
+          <navigator url="/pages/good/good?goodId={{item.id}}" hover-class="navigator-hover" style='height:220px'>
+            <image style="width: 100%; height: 220px; background-color: #eeeeee;" src="https://haitao.nos.netease.com/5fe2af02d90c495fb24de448cb3b72e415083244465341.jpg?imageView&quality=98&crop=0_0_750_500&imageView&thumbnail=710x0&quality=85"></image>
+          </navigator>
+        </view>
+        <view class="zan-cell">
+          <view class="zan-cell__bd">
+            <view class="zan-ellipsis" style="width: 300px;font-size:16px;font-weight:700;">
+              【秀智同款】the SAEM 得鲜 爱可按钮唇膏 M系列 哑光系列 2克/支
+            </view>
           </view>
         </view>
-      </view>
-      <view style="margin-top:10px;padding:0 50rpx">
-        <view class="zan-c-gray" style="float:left;">来自: 小米科技有限公司</view>
-        <view class="zan-c-gray"> | 10人购买</view>
-      </view>
-    </view>
-    <view style='width:100%;height:340px;display:block'>
-      <view>
-        <navigator url="/pages/good/good?goodId={{item.id}}" hover-class="navigator-hover" style='height:220px'>
-          <image style="width: 100%; height: 220px; background-color: #eeeeee;" src="https://haitao.nos.netease.com/5fe2af02d90c495fb24de448cb3b72e415083244465341.jpg?imageView&quality=98&crop=0_0_750_500&imageView&thumbnail=710x0&quality=85"></image>
-        </navigator>
-      </view>
-      <view class="zan-cell">
-        <view class="zan-cell__bd">
-          <view class="zan-ellipsis" style="width: 300px;font-size:16px;font-weight:700;">
-            【秀智同款】the SAEM 得鲜 爱可按钮唇膏 M系列 哑光系列 2克/支
-          </view>
+        <view style="margin-top:10px;padding:0 50rpx">
+          <view class="zan-c-gray" style="float:left;">来自: 小米科技有限公司</view>
+          <view class="zan-c-gray"> | 10人购买</view>
         </view>
       </view>
-      <view style="margin-top:10px;padding:0 50rpx">
-        <view class="zan-c-gray" style="float:left;">来自: 小米科技有限公司</view>
-        <view class="zan-c-gray"> | 10人购买</view>
-      </view>
-    </view>
-    <view style='width:100%;height:340px;display:block'>
-      <view>
-        <navigator url="/pages/good/good?goodId={{item.id}}" hover-class="navigator-hover" style='height:220px'>
-          <image style="width: 100%; height: 220px; background-color: #eeeeee;" src="http://haitao.nos.netease.com/il0krbeq39_800_800.jpg?imageView&thumbnail=400x0&quality=85"></image>
-        </navigator>
-      </view>
-      <view class="zan-cell">
-        <view class="zan-cell__bd">
-          <view class="zan-ellipsis" style="width: 300px;font-size:16px;font-weight:700;">
-            【秀智同款】the SAEM 得鲜 爱可按钮唇膏 M系列 哑光系列 2克/支
+      <view class='pick_item'>
+        <view>
+          <navigator url="/pages/good/good?goodId={{item.id}}" hover-class="navigator-hover" style='height:220px'>
+            <image style="width: 100%; height: 220px; background-color: #eeeeee;" src="http://haitao.nos.netease.com/il0krbeq39_800_800.jpg?imageView&thumbnail=400x0&quality=85"></image>
+          </navigator>
+        </view>
+        <view class="zan-cell">
+          <view class="zan-cell__bd">
+            <view class="zan-ellipsis" style="width: 300px;font-size:16px;font-weight:700;">
+              【秀智同款】the SAEM 得鲜 爱可按钮唇膏 M系列 哑光系列 2克/支
+            </view>
           </view>
         </view>
+        <view style="margin-top:10px;padding:0 50rpx">
+          <view class="zan-c-gray" style="float:left;">来自: 小米科技有限公司</view>
+          <view class="zan-c-gray"> | 10人购买</view>
+        </view>
       </view>
-      <view style="margin-top:10px;padding:0 50rpx">
-        <view class="zan-c-gray" style="float:left;">来自: 小米科技有限公司</view>
-        <view class="zan-c-gray"> | 10人购买</view>
+      <view class='loading_pick' hidden='{{!lastPage}}'>
+        <view>已经没有更多了~</view>
       </view>
     </view>
   </scroll-view>
-  <view style="position:fixed;bottom:6px;right:20px;">
-     <!-- <image style="width:32px;height:32px;" src='../../images/red-package.png'></image> -->
-  </view>
 </view>

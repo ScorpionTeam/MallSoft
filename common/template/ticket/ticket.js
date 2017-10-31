@@ -1,33 +1,18 @@
-const app = getApp()
-var Zan = require('../../component/zanui-weapp/dist/index')
-// pages/my/my.js
-Page(Object.assign({},Zan.Toast,{
+// common/template/ticket/ticket.js
+Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-      userInfo:{}
+  
   },
-  /**
-   * 页面跳转
-   */
-  pageSkip(val){
-    let url = val.currentTarget.dataset.url;
-    wx.navigateTo({
-      url: url
-    })
-  },
-  showToast(){
-    this.showZanToast('toast的内容')
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      userInfo:app.globalData.userInfo
-    })
+  
   },
 
   /**
@@ -78,4 +63,4 @@ Page(Object.assign({},Zan.Toast,{
   onShareAppMessage: function () {
   
   }
-}))
+})

@@ -1,6 +1,6 @@
 <import src="../../component/zanui-weapp/dist/tab/index.wxml" />
 <view class="container">
   <view class='order_tab'>
-    <template is="zan-tab" data="{{tab: tab1, componentId: 'tab1'}}"></template>
+    <template is="zan-tab" data="{{tab: tab, componentId: 'tab'}}"></template>
   </view>
 </view>

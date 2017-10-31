@@ -1,6 +1,7 @@
 const app = getApp()
+var Zan = require('../../component/zanui-weapp/dist/index')
 // pages/my/my.js
-Page({
+Page(Object.assign({},Zan.Toast,{
 
   /**
    * 页面的初始数据
@@ -16,6 +17,9 @@ Page({
     wx.navigateTo({
       url: url
     })
+  },
+  showToast(){
+    this.showZanToast('toast的内容')
   },
   /**
    * 生命周期函数--监听页面加载
@@ -74,4 +78,4 @@ Page({
   onShareAppMessage: function () {
   
   }
-})
+}))

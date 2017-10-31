@@ -2,9 +2,9 @@
 <import src="../../component/zanui-weapp/dist/noticebar/index.wxml" />
 <import src="../../common/template/hongbao/hongbao.wxml" />
 <import src='../../component/zanui-weapp/dist/loadmore/index.wxml' />
-<template is="hongbaoFix" data="{{openFlag:'test'}}"></template>
+<template is="hongbaoFix" data="{{openFlag:'openFlag',animationData:animationData}}"></template>
 <view class="container">
-  <view class="zan-panel" style="width:100%;">
+  <view class="zan-panel" style="width:100%;margin:0;">
     <template is="zan-noticebar" data="{{ ...movable, componentId: 'movable'  }}"></template>
   </view>
   <scroll-view scroll-y="true" style='height:600px;' lower-threshold="5" bindscrolltolower='pullUp'>

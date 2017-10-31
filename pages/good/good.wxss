@@ -105,7 +105,7 @@
   position: relative;
   top: -54rpx;
   border-radius: 13rpx;
-  border: 1px solid #c1c1c1;
+  border: 1px solid #f1f1f1;
 }
 
 .confirm_good_introduce {

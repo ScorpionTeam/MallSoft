@@ -3,7 +3,7 @@ var Zan = require('../../component/zanui-weapp/dist/tab/index');
 
 Page(Object.assign({}, Zan, {
   data: {
-    tab1: {
+    tab: {
       list: [{
         id: 'all',
         title: '全部'
@@ -24,60 +24,14 @@ Page(Object.assign({}, Zan, {
       scroll: false,
       fixed:true
     },
-    tab2: {
-      list: [{
-        id: '1',
-        title: '最新商品1'
-      }, {
-        id: '2',
-        title: '最新商品2'
-      }, {
-        id: '3',
-        title: '最新商品3'
-      }, {
-        id: '4',
-        title: '最新商品4'
-      }, {
-        id: '5',
-        title: '最新商品5'
-      }, {
-        id: '6',
-        title: '最新商品6'
-      }],
-      selectedId: '1',
-      scroll: true,
-      height: 45
-    },
-    tab3: {
-      list: [{
-        id: '1',
-        title: '商品1'
-      }, {
-        id: '2',
-        title: '商品2'
-      }, {
-        id: '3',
-        title: '商品3'
-      }, {
-        id: '4',
-        title: '商品4'
-      }, {
-        id: '5',
-        title: '商品5'
-      }, {
-        id: '6',
-        title: '商品6'
-      }],
-      selectedId: '1',
-      scroll: true,
-      height: 45
-    }
+    selectType:''//当前目录
   },
   handleZanTabChange(e) {
     var componentId = e.componentId;
     var selectedId = e.selectedId;
+    //控制选中样式
     this.setData({
-      [`${componentId}.selectedId`]: selectedId
+      [componentId+`.selectedId`]: selectedId
     });
   },
 
@@ -120,7 +74,7 @@ Page(Object.assign({}, Zan, {
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    
   },
 
   /**

@@ -3,21 +3,21 @@
 const app = getApp()
 var Zan = require('../../component/zanui-weapp/dist/index');
 var Hongbao = require('../../common/template/hongbao/hongbao');
-Page(Object.assign({}, Zan.NoticeBar,Hongbao,{
+Page(Object.assign({}, Zan.NoticeBar, Hongbao, {
   data: {
-    test:false,
-    activityShow:false,//红包活动显示标识
-    motto: 'Hello World',
     baseUrl: 'http://mall.test.com:8088/mall/',
     userInfo: {},
-    hasUserInfo: false,
     goodList: [],
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     page: {
       pageSize: 5,
       pageNo: 1
     },
+    activityShow: false,//红包活动显示标识
+    hasUserInfo: false,
     lastPage: false,
+    pageComplete: true,
+    animationData: {},
     movable: {
       text: '每天多奋斗一点,也为自己老去后以免遗憾年轻时的一事无成.每天多奋斗一点,也为自己老去后以免遗憾年轻时的一事无成.'
     }
@@ -29,23 +29,19 @@ Page(Object.assign({}, Zan.NoticeBar,Hongbao,{
   // 上拉加载
   pullUp: function () {
     //最后一页，不再进行请求
-    if (this.data.lastPage) {
-      wx.showToast({
-        title: '没有啦'
-      });
+    if (this.data.lastPage || !this.data.pageComplete) {
       return;
     }
+    // 防止过度频繁请求
+    this.setData({
+      pageComplete: false
+    })
+    wx.showLoading({
+      title: '加载中'
+    });
     let pageNo = this.data.page.pageNo + 1;
     console.log(pageNo);
-    this.setData({
-      page: {
-        pageNo: pageNo
-      }
-    });
     let url = this.data.baseUrl + 'good/preference-given?pageNo=' + this.data.page.pageNo + '&pageSize=5';
-    wx.showLoading({
-      title: "加载中"
-    })
     wx.request({
       url: url,
       method: "GET",
@@ -55,14 +51,21 @@ Page(Object.assign({}, Zan.NoticeBar,Hongbao,{
           let arr = this.data.goodList.concat(res.data.list);
           this.setData({
             goodList: arr,
-            lastPage: res.data.lastPage
+            lastPage: res.data.lastPage,
+            page: {
+              pageNo: pageNo
+            },
+            pageComplete: true
           });
           wx.hideLoading();
         }
       },
       fail: error => {
+        console.log(error)
         wx.hideLoading();
-        console.log(error);
+        this.setData({
+          pageComplete: true
+        })
       }
     })
   },
@@ -79,6 +82,15 @@ Page(Object.assign({}, Zan.NoticeBar,Hongbao,{
     })
   },
   onLoad: function () {
+    //判断本地是否有缓存
+    wx.getStorage({
+      key:'token',
+      success: function (res) {
+        console.log(res);
+      },
+      fail:function(err){
+      }
+    })
     wx.authorize({
       scope: 'scope.userInfo',
       success: res => {
@@ -129,9 +141,7 @@ Page(Object.assign({}, Zan.NoticeBar,Hongbao,{
       })
     }
   },
-  /**
-  * 页面上拉触底事件的处理函数
-  */
+  // 页面上拉触底事件的处理函数
   onReachBottom: function () {
     // let pageNo = this.data.page.pageNo + 1;
     // this.setData({
@@ -160,6 +170,10 @@ Page(Object.assign({}, Zan.NoticeBar,Hongbao,{
     //     console.log(error);
     //   }
     // })
+  },
+  // 下拉刷新事件
+  onPullDownRefresh(){
+    wx.stopPullDownRefresh();
   },
   getUserInfo: function (e) {
     console.log(e)

@@ -1,0 +1,51 @@
+.content_detail_e_1 {
+        width: 100%;
+        margin-top: 10rpx;
+        font-size: 30rpx;
+}
+
+.content_detail_e_2 {
+        margin-top: 40rpx;
+        font-size: 26rpx;
+}
+
+.help_img_big {
+        text-align: center;
+        margin-top: 60rpx;
+        width: 100%;
+        height: 1000rpx;
+}
+
+.container_detail {
+        padding: 20rpx;
+        background-color: white;
+}
+
+.help_content_a {
+        background: #fff;
+        text-align: center;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        position: fixed;
+        bottom: 0;
+        line-height: 120rpx;
+        height: 120rpx;
+        vertical-align: middle;
+}
+
+.help_a_image_tel {
+        width: 40rpx;
+        height: 40rpx;
+        line-height: 120rpx;
+        vertical-align: middle;
+}
+
+.a_tel_sp {
+        display: inline-block;
+        margin-left: 10rpx;
+        color: #f30;
+        font-size: 24rpx;
+        line-height: 120rpx;
+        vertical-align: middle;
+}

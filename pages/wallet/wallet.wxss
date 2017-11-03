@@ -1,1 +1,33 @@
 /* pages/wallet/wallet.wxss */
+
+.content_a_wallet {
+        margin-left: 5rpx;
+        margin-right: 5rpx;
+        border-radius: 20rpx;
+        background-color: #369;
+        width: 98%;
+        height: 300rpx;
+}
+
+.text_lab_surplus {
+        margin-left: 30rpx;
+        margin-top: 30rpx;
+        color: white;
+        font-size: 32rpx;
+}
+
+.text_lab_detail {
+        right: 30rpx;
+        font-size: 28rpx;
+        color: white;
+        position: fixed;
+        top: 120rpx;
+}
+
+.text_surplus {
+        margin-left: 30rpx;
+        margin-top: 60rpx;
+        color: white;
+        font-size: 60rpx;
+        width: auto;
+}

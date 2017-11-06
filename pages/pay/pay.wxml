@@ -117,5 +117,5 @@
   <view class='pay_footer_lf'>合计:
     <span class='price_color'>¥ 139.00</span>
   </view>
-  <button class='zan-btn zan-btn--danger pay_footer_rg'>提交订单</button>
+  <button class='zan-btn zan-btn--danger pay_footer_rg' bindtap='gotoPay'>{{btnTitle}}</button>
 </view>

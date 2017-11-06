@@ -1,4 +1,58 @@
-.order_tab{
-  border-top:1px solid #f9f3f3;
-  
+.order_tab {
+  border-top: 1px solid #f9f3f3;
+}
+.order_index{
+  font-size: 0;
+  background: #fff;
+  height: 380rpx;
+  border-bottom: 1px solid #f9f3f3;
+}
+.order_item{
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  background: #f9f3f3;
+  font-size: 30rpx;
+  width:100%;
+  padding:20rpx;
+  height: 160rpx; 
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.order_item_label{
+  font-size: 30rpx;
+  padding: 20rpx;
+  margin-right: 20rpx;
+  background: #f9f3f3
+}
+.order_img{
+  width: 200rpx;
+  height: 160rpx;
+  margin-bottom:8rpx;
+  object-fit: cover;
+  display: block;
+}
+
+.order_status{
+  font-size: 30rpx;
+  margin-left: 40rpx;
+  height: 40rpx;
+  width: 100rpx;
+}
+
+.order_label
+{
+ margin-left: 30%;
+ width: 100%;
+ height: 40rpx;
+ font-size: 30rpx;
+ text-align: right;
+}
+.order_button{
+  margin-top: 20rpx;
+  text-align: center;
+  margin-right: 20rpx;
+  width: 180rpx;
+  margin-left: 70%;
 }

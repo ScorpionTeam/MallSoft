@@ -3,4 +3,17 @@
   <view class='order_tab'>
     <template is="zan-tab" data="{{tab: tab, componentId: 'tab'}}"></template>
   </view>
+  <scroll-view scroll-y="true" style='width:100%'>
+    <view wx:for="{{goods}}" wx:for-item="item" class='order_index'>
+      <view class="order_item">
+        <image class='order_img' class="order_img" mode="widthFix" src='{{item.goodsImg}}'></image>
+        <label class='order_item_label'>{{item.goodsStr}}</label>
+      </view>
+      <view>
+        <label class='order_status'>{{item.goodsSttus}}</label>
+        <label class='order_label'>共1件商品 实付款:¥{{item.price}}.00</label>
+      </view>
+      <button bindtap='goodsAction' data-item='{{item}}' id='{{item.goodId}}' type='primary' class='order_button' size="mini">{{item.buttonTitle}}</button>
+    </view>
+  </scroll-view>
 </view>

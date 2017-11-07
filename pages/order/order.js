@@ -92,8 +92,10 @@ Page(Object.assign({}, Zan, {
     var dataItem = e.currentTarget.dataset;
     console.log(dataItem.item)
     if (dataItem.item.buttonTitle == "去付款") {
+      // let goodsId = dataItem.item.goodId
+      let goodsId = e.currentTarget.id
       wx.navigateTo({
-        url: '/pages/pay/pay?id=1',
+        url: '/pages/pay/pay?id='+goodsId,
       })
     }
   },
@@ -133,7 +135,7 @@ Page(Object.assign({}, Zan, {
     })
 
 
-    // let params = {},
+    // let params = {}
     // wx.request({
     //   url: '',
     // })

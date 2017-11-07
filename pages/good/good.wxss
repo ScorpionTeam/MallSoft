@@ -1,6 +1,25 @@
 .good_container {
 }
 
+.good-btn {
+  position: relative;
+  color: #333;
+  background-color: green;
+  margin-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 2px;
+  border: 1rpx solid #e5e5e5;
+  font-size: 16px;
+  line-height: 45px;
+  height: 45px;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+}
+
+
 /*商品介绍上部 */
 
 .good_north {
@@ -167,4 +186,10 @@
 }
 .item_btn{
   color:#fff;
+}
+.item_list{
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10rpx;
 }

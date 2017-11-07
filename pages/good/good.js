@@ -10,6 +10,7 @@ Page(Object.assign({},quantity,{
       url:'http://mall.test.com:8088/mall/good/goodInfo?goodId=',
       showDialog:false,//dialog开关
       quantity:1,//件数
+      specs:[]
   },
   /**
    *跳转付款页面 
@@ -35,6 +36,18 @@ Page(Object.assign({},quantity,{
       showDialog:!this.data.showDialog
     })
   },
+  chickAction(e){
+    console.log(e)
+    for(var i = 0; i <this.data.specs.length;i++){
+      if(e.currentTarget.id == i){
+        this.data.specs[i].showSelect = true
+      }else{
+        this.data.specs[i].showSelect = false
+      }
+    }
+    this.setData(this.data)
+    console.log(this.data.specs)
+  },
   /**
    * 打开选择数量页面
    */
@@ -45,6 +58,23 @@ Page(Object.assign({},quantity,{
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+    this.setData({
+      specs:[{
+        id:0,
+        name:"100",
+        showSelect:false
+      }, {
+        id:1,
+        name: "200",
+        showSelect:false
+      },{
+        id:2,
+        name:"300",
+        showSelect:false
+      },]
+    })
+
     this.setData({
       goodInfo:{
         id:options.goodId

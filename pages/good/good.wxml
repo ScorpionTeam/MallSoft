@@ -47,10 +47,10 @@
         <view class='good_category'>
           <view class='category_list'>
             <view class='item_tit'>尺寸:</view>
-            <view class='item_list'>
-              <button class="zan-btn zan-btn--mini">50cm</button>
-              <button class="zan-btn zan-btn--mini">70cm</button>
-            </view>
+             <view class='item_list' wx:for='{{specs}}' wx:for-item="item"> 
+              <button wx:if="{{item.showSelect==false}}" class="zan-btn zan-btn--mini" bindtap='chickAction' id='{{item.id}}' >{{item.name}}cm</button>
+              <button wx:else class="zan-btnSelect zan-btn--mini" bindtap='chickAction' id='{{item.id}}'>{{item.name}}cm</button>
+             </view> 
           </view>
         </view>
         <view class='confirm_good_count'>

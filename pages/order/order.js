@@ -34,56 +34,7 @@ Page(Object.assign({}, Zan, {
     this.setData({
       [componentId + `.selectedId`]: selectedId
     });
-    if (selectedId == "topay") {
-      this.setData({
-        goods: [
-          {
-            goodId: "2031",
-            goodsImg: "https://img11.360buyimg.com/n5/jfs/t11401/34/504898878/183378/5a6a8a48/59f1c3a1N2174c8cc.jpg",
-            goodsStr: "清风(APP)抽纸 原木纯品金装系列3层130抽*16包纸巾(整箱销售)",
-            goodsSttus: "待付款",
-            price: "50",
-            buttonTitle: "去付款"
-          }
-        ],
-      }
-      )
-    }
-    if (selectedId == "all") {
-      this.setData({
-        goods: [
-          {
-            goodId: "2030",
-            goodsImg: "https://img10.360buyimg.com/n5/jfs/t3394/97/927974603/289198/faa13081/5816f2e5Nab3d62be.jpg",
-            goodsStr: "清风(APP)抽纸 原木纯品金装系列3层130抽*16包纸巾(整箱销售)",
-            goodsSttus: "已完成",
-            price: "40",
-            buttonTitle: "再次购买"
-          }, {
-            goodId: "2031",
-            goodsImg: "https://img11.360buyimg.com/n5/jfs/t11401/34/504898878/183378/5a6a8a48/59f1c3a1N2174c8cc.jpg",
-            goodsStr: "清风(APP)抽纸 原木纯品金装系列3层130抽*16包纸巾(整箱销售)",
-            goodsSttus: "待付款",
-            price: "50",
-            buttonTitle: "去付款"
-          }, {
-            goodId: "2032",
-            goodsImg: "https://img11.360buyimg.com/n5/jfs/t9853/275/2215551794/187986/425288fd/59f1c3a2Ne3576868.jpg",
-            goodsStr: "清风(APP)抽纸 原木纯品金装系列3层130抽*16包纸巾(整箱销售)",
-            goodsSttus: "待发货",
-            price: "60",
-            buttonTitle: "再次购买"
-          }, {
-            goodId: "2033",
-            goodsImg: "https://img10.360buyimg.com/n5/jfs/t3394/97/927974603/289198/faa13081/5816f2e5Nab3d62be.jpg",
-            goodsStr: "清风(APP)抽纸 原木纯品金装系列3层130抽*16包纸巾(整箱销售)",
-            goodsSttus: "待收货",
-            price: "70",
-            buttonTitle: "确认收货"
-          },
-        ]
-      })
-    }
+    this.getDataFromNet(selectedId)
   },
   /**
    * 去付款
@@ -99,7 +50,7 @@ Page(Object.assign({}, Zan, {
       })
     }
   },
-  getDataFromNet() {
+  getDataFromNet(id) {
     this.setData({
       goods: [
         {
@@ -133,27 +84,19 @@ Page(Object.assign({}, Zan, {
         },
       ]
     })
+    let params = {}
 
-
-    // let params = {}
-    // wx.request({
-    //   url: '',
-    // })
-    // wx.request({
-    // url: '',
-    // method: 'GET',
-    // data: params,
-    // success: function (res) {
-    //   console.log(res);
-    //   this.setData({
-    //     deliveryId: res.data.data.id
-    //   });
-    //   wx.navigateBack({ delta: 1 });
-    // },
-    // fail: function (err) {
-    //   console.log(err);
-    // }
-    // })
+    wx.request({
+      url: '',
+      method:'GET',
+      data :params,
+      success: function(res){
+        console.log(res)
+      },
+      fail: function (err){
+        console.log(err)
+      }
+    })
   },
   /**
    * 生命周期函数--监听页面加载

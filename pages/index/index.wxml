@@ -18,21 +18,21 @@
     </swiper>
     <!--分类入口-->
     <view class='category_index'>
-        <view class='category_item'>
-          <image class='category_img' src='../../images/pintuan.png'></image>
-          <view>拼团</view>
-        </view>
-        <view class='category_item'>
+      <view class='category_item'>
+        <image class='category_img' src='../../images/pintuan.png'></image>
+        <view>拼团</view>
+      </view>
+      <view class='category_item'>
         <image class='category_img' src='../../images/qiang.png'></image>
         <view>秒杀</view>
-        </view>
-        <view class='category_item'>
+      </view>
+      <view class='category_item'>
         <image class='category_img' src='../../images/moreIndex.png'></image>
         <view>分类</view>
-        </view>
+      </view>
     </view>
-    <!-- <view class='pick_list'>
-      <view wx:for="{{goodList}}" wx:key="unique" class='pick_item'>
+    <view class='pick_list'>
+       <view wx:for="{{goodList}}" wx:key="unique" class='pick_item'>
         <view style="padding:0 30rpx;" bindtap="goodInfo">
           <navigator url="/pages/good/good?goodId={{item.id}}" hover-class="navigator-hover" style='height:220px'>
             <image style="width: 100%; height: 220px; background-color: #eeeeee;" src="{{item.mainImgUrl}}"></image>
@@ -49,12 +49,12 @@
           <view class="zan-c-gray" style="float:left;">来自: 小米科技有限公司</view>
           <view class="zan-c-gray"> | {{item.saleVolume}} 人购买</view>
         </view>
-      </view>
-    </view> -->
+      </view> 
+    </view>
     <!--手机测试页面-->
-    <view class='pick_list'>
+    <!-- <view class='pick_list'>
       <view class='pick_tit'>精选宝贝</view>
-      <view class='pick_item'>
+      <view class='pick_item' wx:for='{{[0,1,2]}}' wx:for-item="item">
         <view>
           <navigator url="/pages/good/good?goodId={{item.id}}" hover-class="navigator-hover" style='height:220px'>
             <image style="width: 100%; height: 220px; background-color: #eeeeee;" src="https://haitao.nos.netease.com/5fe2af02d90c495fb24de448cb3b72e415083244465341.jpg?imageView&quality=98&crop=0_0_750_500&imageView&thumbnail=710x0&quality=85"></image>
@@ -72,27 +72,6 @@
           <view class="zan-c-gray"> | 10人购买</view>
         </view>
       </view>
-      <view class='pick_item'>
-        <view>
-          <navigator url="/pages/good/good?goodId={{item.id}}" hover-class="navigator-hover" style='height:220px'>
-            <image style="width: 100%; height: 220px; background-color: #eeeeee;" src="http://haitao.nos.netease.com/il0krbeq39_800_800.jpg?imageView&thumbnail=400x0&quality=85"></image>
-          </navigator>
-        </view>
-        <view class="zan-cell">
-          <view class="zan-cell__bd">
-            <view class="zan-ellipsis" style="width: 300px;font-size:16px;font-weight:700;">
-              【秀智同款】the SAEM 得鲜 爱可按钮唇膏 M系列 哑光系列 2克/支
-            </view>
-          </view>
-        </view>
-        <view style="margin-top:10px;padding:0 50rpx">
-          <view class="zan-c-gray" style="float:left;">来自: 小米科技有限公司</view>
-          <view class="zan-c-gray"> | 10人购买</view>
-        </view>
-      </view>
-      <view class='loading_pick' hidden='{{!lastPage}}'>
-        <view>已经没有更多了~</view>
-      </view>
-    </view>
+    </view> -->
   </scroll-view>
 </view>

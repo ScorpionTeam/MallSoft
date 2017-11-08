@@ -10,6 +10,10 @@ App({
     wx.login({
       success: res => {
         console.log(res);
+        wx.setStorage({
+          key: 'code',
+          data: res.code,
+        })
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
       }
     })

@@ -5,6 +5,11 @@ Page({
    * 页面的初始数据
    */
   data: {
+    url: 'http://ycb8pe.natappfree.cc/mall/wx/good/findByGoodId?goodId=',
+    payUrl: 'http://ycb8pe.natappfree.cc/mall/wx/jsapi/order/preOrder',
+    goodInfo:{},
+    quantity:1,
+    totalPrice:0,
     customerOpt: {
       isMessage: true,
       word: ''
@@ -62,6 +67,39 @@ Page({
      wx.showLoading({
        title: '加载中',
      })
+    var wxcode 
+    let mainUrl = this.data.payUrl
+    wx.getStorage({
+      key: 'code',
+      success: function(res) {
+        console.log(res.data)
+        if(res.data){
+          let order = {}
+          order.goodId = "1"
+          order.deliveryId = "3"
+          order.count = "1"
+          order.message = "尽量快点"
+          order.ticket = "1"
+          order.userTicket = false
+          order.point = "22"
+          order.totalFee = "1"
+          let url = mainUrl + "?code=" + res.data + "&order=" + JSON.stringify(order)
+          wx.request({
+            url: url,
+            method: 'GET',
+            success: function (res) {
+              console.log(res);
+            },
+            fail: function (err) {
+              console.log(err);
+            }
+          })
+        }
+      },
+    })
+    console.log(wxcode)
+    
+    wx.hideLoading()
      this.readyToPay()
   },
   /**
@@ -86,6 +124,22 @@ Page({
   onLoad: function (options) {
 
     console.log(options);
+
+    wx.request({
+      url: this.data.url + options.goodId,
+      method: 'GET',
+      success: res => {
+        console.log(res.data.data)
+        this.setData({
+          goodInfo: res.data.data,
+          quantity: options.quantity,
+        })
+        let price = res.data.data.promotion * options.quantity
+        this.setData({
+          totalPrice:price.toFixed(2)
+        })
+      }
+    })
   },
 
   /**

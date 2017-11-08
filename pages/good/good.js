@@ -19,7 +19,6 @@ Page(Object.assign({}, quantity, {
   skipToPay(e) {
     console.log(e)
     var goodId= e.currentTarget.id
-    this.handleZanQuantityChange()
     var quantityCount = e.currentTarget.dataset.count
     wx.navigateTo({
       url: '/pages/pay/pay?goodId=' + goodId + '&quantity=' + quantityCount,
@@ -29,6 +28,7 @@ Page(Object.assign({}, quantity, {
    * 购物数量事件
    */
   handleZanQuantityChange(e) {
+    console.log(e)
     this.setData({
       quantity: e.quantity
     })

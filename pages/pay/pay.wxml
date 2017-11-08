@@ -25,17 +25,17 @@
     </view>
     <view class="zan-card">
       <view class="zan-card__thumb">
-        <image class="zan-card__img" src="https://img.yzcdn.cn/upload_files/2016/11/25/FpqPXlrMRjKwJs8VdTu3ZDJCj4j5.jpeg?imageView2/2/w/200/h/200/q/90/format/jpeg" mode="aspectFit"></image>
+        <image class="zan-card__img" src="{{goodInfo.mainImgUrl}}" mode="aspectFit"></image>
       </view>
       <view class="zan-card__detail">
         <view class="zan-card__detail-row">
-          <view class="zan-card__right-col">¥ 999.99</view>
+          <view class="zan-card__right-col">¥ {{goodInfo.promotion}}</view>
           <view class="zan-card__left-col zan-ellipsis--l2">
-            红烧牛肉【虚拟商品】【有库存】【有sku】
+            {{goodInfo.goodName}}
           </view>
         </view>
         <view class="zan-card__detail-row zan-c-gray-darker">
-          <view class="zan-card__right-col">x2</view>
+          <view class="zan-card__right-col">x{{quantity}}</view>
           <view class="zan-card__left-col">
             3000克 50%
           </view>
@@ -56,7 +56,7 @@
     </view>
     <view class='zan-cell'>
       <view class='zan-cell__bd'>合计</view>
-      <view class='zan-cell__ft price_color'>¥139.00</view>
+      <view class='zan-cell__ft price_color'>¥{{totalPrice}}</view>
     </view>
   </view>
   <view class='zan-panel token_pay'>
@@ -77,19 +77,19 @@
     <view class='zan-cell cost_info'>
       <view class='zan-cell__bd'>商品金额</view>
       <view class='zan-cell__ft'>
-        ¥ 139.00
+        ¥ {{totalPrice}}
       </view>
     </view>
     <view class='zan-cell cost_info'>
       <view class='zan-cell__bd'>优惠券</view>
       <view class='zan-cell__ft'>
-        - ¥ 139.00
+        - ¥ 优惠券折扣
       </view>
     </view>
     <view class='zan-cell'>
       <view class='zan-cell__bd'>运费</view>
       <view class='zan-cell__ft'>
-        ¥ 0.00
+        ¥ 待定
       </view>
     </view>
   </view>
@@ -115,7 +115,7 @@
 </view>
 <view class='pay_footer'>
   <view class='pay_footer_lf'>合计:
-    <span class='price_color'>¥ 139.00</span>
+    <span class='price_color'>¥ {{totalPrice}}</span>
   </view>
   <button class='zan-btn zan-btn--danger pay_footer_rg' bindtap='gotoPay'>{{btnTitle}}</button>
 </view>
